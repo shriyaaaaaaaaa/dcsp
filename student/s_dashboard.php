@@ -1,16 +1,27 @@
 <?php
 session_start();
-header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1.
-header("Pragma: no-cache"); // HTTP 1.0.
-header("Expires: 0"); // Proxies
-include('includes/db_connect.php');
 
+// Check if user is logged in
 if (!isset($_SESSION['student_id'])) {
     header('Location: s_login.php');
     exit;
 }
 
+// Prevent browser caching
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+header("Expires: 0");
+
+include('includes/db_connect.php');
+
 $student_id = $_SESSION['student_id'];
+
+// Get success message if it exists
+$success_message = "";
+if (isset($_SESSION['login_success'])) {
+    $success_message = $_SESSION['login_success'];
+    unset($_SESSION['login_success']); // Clear it after retrieving
+}
 
 // Fetch student details
 $query = $conn->prepare("SELECT * FROM student WHERE id = ?");
@@ -19,18 +30,20 @@ $query->execute();
 $student = $query->get_result()->fetch_assoc();
 
 if (!$student) {
-    echo "Error: Student not found!";
+    session_destroy();
+    header('Location: s_login.php');
     exit;
 }
 
 $student_name = $student['name'];
 $org_id = $student['org_id'];
-$class_id = $student['class_id'] ?? null; // assuming you have class_id in student table
+$class_id = $student['class_id'] ?? null;
 $tick = $student['tick'];
 
 // Redirect if no class assigned
 if (empty($class_id)) {
-    echo "<script>alert('Please update your profile first to select a class.'); window.location.href='s_profile.php';</script>";
+    $_SESSION['profile_warning'] = 'Please update your profile first to select a class.';
+    header('Location: s_profile.php');
     exit;
 }
 
@@ -67,7 +80,7 @@ function convertTo12Hours($timeStr) {
     <h5 class="me-4 mb-0"><?= htmlspecialchars($student_name) ?></h5>
     <div class="nav-buttons d-flex gap-2">
       <a class="nav-link-box" href="s_dashboard.php">Home</a>
-      <a class="nav-link-box" href="view_schedule.php">Schedule</a>
+      <a class="nav-link-box" href="#home">Schedule</a>
       <a class="nav-link-box" href="s_profile.php">Profile</a>
     </div>
   </div>
@@ -76,6 +89,16 @@ function convertTo12Hours($timeStr) {
 
 <!-- Body Section -->
 <div class="container py-5">
+  
+  <!-- Success Message Alert -->
+  <?php if ($success_message): ?>
+    <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+      <i class="material-icons" style="font-size: 20px; vertical-align: middle;">check_circle</i>
+      <strong><?= htmlspecialchars($success_message) ?></strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <?php endif; ?>
+
   <div id="home">
     <h3 class="section-title mb-4 text-center">📅 Your Class Schedule</h3>
 
@@ -192,9 +215,50 @@ function convertTo12Hours($timeStr) {
 .card:hover {
   transform: translateY(-5px);
 }
+.alert {
+  border-radius: 10px;
+  animation: slideDown 0.5s ease-out;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>
 
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Auto-hide success alert after 5 seconds
+document.addEventListener('DOMContentLoaded', function() {
+  const alert = document.querySelector('.alert-success');
+  if (alert) {
+    setTimeout(function() {
+      const bsAlert = new bootstrap.Alert(alert);
+      bsAlert.close();
+    }, 5000);
+  }
+});
+
+// Prevent back button issues and form resubmission
+window.history.replaceState(null, null, window.location.href);
+
+window.addEventListener('popstate', function() {
+  window.history.replaceState(null, null, window.location.href);
+});
+
+// Prevent page from being cached
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    window.location.reload();
+  }
+});
+</script>
+
 </body>
 </html>

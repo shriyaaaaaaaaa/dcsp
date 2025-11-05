@@ -1,9 +1,8 @@
 <?php
 session_start();
-session_unset();
+$_SESSION = [];
 session_destroy();
-header("Location: ../s_login.php");
-exit();
+
 ?>
 
 
