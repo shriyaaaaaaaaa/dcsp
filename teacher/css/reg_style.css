@@ -1,0 +1,96 @@
+/* reg_style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: url('img/tregister.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-container {
+  background-color: rgba(255, 255, 255, 0.35); /* 35% transparent white */
+  border-radius: 25px;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.register-container h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+form .form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px 15px;
+  font-size: 16px;
+  color: #333;
+  width: 100%;
+}
+
+.form-control::placeholder {
+  color: #666;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 12px;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.message-box {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #b00020;
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.success-box {
+  background-color: rgba(0, 128, 0, 0.2);
+  color: #006400;
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .register-container {
+    padding: 30px 20px;
+  }
+
+  .form-control {
+    font-size: 15px;
+  }
+
+  .btn-primary {
+    font-size: 16px;
+  }
+}

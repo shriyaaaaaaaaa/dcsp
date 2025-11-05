@@ -1,0 +1,1056 @@
+2025-08-14 19:37:14 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 780
+Gen 1 - Best fitness: 750
+Gen 2 - Best fitness: 780
+Gen 3 - Best fitness: 840
+Gen 4 - Best fitness: 840
+Gen 5 - Best fitness: 810
+Gen 6 - Best fitness: 650
+Gen 7 - Best fitness: 650
+Gen 8 - Best fitness: 690
+Gen 9 - Best fitness: 610
+Gen 10 - Best fitness: 770
+Gen 11 - Best fitness: 810
+Gen 12 - Best fitness: 780
+Gen 13 - Best fitness: 750
+Gen 14 - Best fitness: 580
+Gen 15 - Best fitness: 580
+Gen 16 - Best fitness: 610
+Gen 17 - Best fitness: 620
+Gen 18 - Best fitness: 590
+Gen 19 - Best fitness: 550
+Gen 20 - Best fitness: 550
+Gen 21 - Best fitness: 520
+Gen 22 - Best fitness: 560
+Gen 23 - Best fitness: 260
+Gen 24 - Best fitness: 510
+Gen 25 - Best fitness: 510
+Gen 26 - Best fitness: 550
+Gen 27 - Best fitness: 550
+Gen 28 - Best fitness: 740
+Gen 29 - Best fitness: 390
+Gen 30 - Best fitness: 480
+Gen 31 - Best fitness: 590
+Gen 32 - Best fitness: 540
+Gen 33 - Best fitness: 650
+Gen 34 - Best fitness: 610
+Gen 35 - Best fitness: 650
+Gen 36 - Best fitness: 220
+Gen 37 - Best fitness: 220
+Gen 38 - Best fitness: 520
+Gen 39 - Best fitness: 770
+Best timetable saved to timetable_ga.json
+
+
+2025-08-14 19:38:47 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 780
+Gen 1 - Best fitness: 810
+Gen 2 - Best fitness: 780
+Gen 3 - Best fitness: 780
+Gen 4 - Best fitness: 810
+Gen 5 - Best fitness: 710
+Gen 6 - Best fitness: 810
+Gen 7 - Best fitness: 680
+Gen 8 - Best fitness: 720
+Gen 9 - Best fitness: 750
+Gen 10 - Best fitness: 810
+Gen 11 - Best fitness: 810
+Gen 12 - Best fitness: 740
+Gen 13 - Best fitness: 570
+Gen 14 - Best fitness: 610
+Gen 15 - Best fitness: 550
+Gen 16 - Best fitness: 710
+Gen 17 - Best fitness: 710
+Gen 18 - Best fitness: 740
+Gen 19 - Best fitness: 510
+Gen 20 - Best fitness: 710
+Gen 21 - Best fitness: 650
+Gen 22 - Best fitness: 510
+Gen 23 - Best fitness: 650
+Gen 24 - Best fitness: 620
+Gen 25 - Best fitness: 650
+Gen 26 - Best fitness: 650
+Gen 27 - Best fitness: 550
+Gen 28 - Best fitness: 640
+Gen 29 - Best fitness: 680
+Gen 30 - Best fitness: 610
+Gen 31 - Best fitness: 680
+Gen 32 - Best fitness: 410
+Gen 33 - Best fitness: 550
+Gen 34 - Best fitness: 510
+Gen 35 - Best fitness: 650
+Gen 36 - Best fitness: 680
+Gen 37 - Best fitness: 550
+Gen 38 - Best fitness: 580
+Gen 39 - Best fitness: 480
+Best timetable saved to timetable_ga.json
+
+
+2025-08-15 05:08:12 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\cando\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 840
+Gen 1 - Best fitness: 810
+Gen 2 - Best fitness: 840
+Gen 3 - Best fitness: 810
+Gen 4 - Best fitness: 750
+Gen 5 - Best fitness: 720
+Gen 6 - Best fitness: 680
+Gen 7 - Best fitness: 720
+Gen 8 - Best fitness: 720
+Gen 9 - Best fitness: 780
+Gen 10 - Best fitness: 810
+Gen 11 - Best fitness: 650
+Gen 12 - Best fitness: 710
+Gen 13 - Best fitness: 650
+Gen 14 - Best fitness: 550
+Gen 15 - Best fitness: 610
+Gen 16 - Best fitness: 750
+Gen 17 - Best fitness: 810
+Gen 18 - Best fitness: 480
+Gen 19 - Best fitness: 540
+Gen 20 - Best fitness: 610
+Gen 21 - Best fitness: 680
+Gen 22 - Best fitness: 640
+Gen 23 - Best fitness: 740
+Gen 24 - Best fitness: 510
+Gen 25 - Best fitness: 620
+Gen 26 - Best fitness: 650
+Gen 27 - Best fitness: 450
+Gen 28 - Best fitness: 580
+Gen 29 - Best fitness: 650
+Gen 30 - Best fitness: 520
+Gen 31 - Best fitness: 580
+Gen 32 - Best fitness: 510
+Gen 33 - Best fitness: 490
+Gen 34 - Best fitness: 650
+Gen 35 - Best fitness: 520
+Gen 36 - Best fitness: 510
+Gen 37 - Best fitness: 550
+Gen 38 - Best fitness: 480
+Gen 39 - Best fitness: 640
+Best timetable saved to timetable_ga.json
+
+
+2025-08-15 05:09:51 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\cando\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 830
+Gen 1 - Best fitness: 800
+Gen 2 - Best fitness: 860
+Gen 3 - Best fitness: 830
+Gen 4 - Best fitness: 830
+Gen 5 - Best fitness: 670
+Gen 6 - Best fitness: 770
+Gen 7 - Best fitness: 800
+Gen 8 - Best fitness: 800
+Gen 9 - Best fitness: 730
+Gen 10 - Best fitness: 760
+Gen 11 - Best fitness: 700
+Gen 12 - Best fitness: 600
+Gen 13 - Best fitness: 630
+Gen 14 - Best fitness: 730
+Gen 15 - Best fitness: 670
+Gen 16 - Best fitness: 600
+Gen 17 - Best fitness: 740
+Gen 18 - Best fitness: 250
+Gen 19 - Best fitness: 340
+Gen 20 - Best fitness: 210
+Gen 21 - Best fitness: 510
+Gen 22 - Best fitness: 350
+Gen 23 - Best fitness: 630
+Gen 24 - Best fitness: 540
+Gen 25 - Best fitness: 440
+Gen 26 - Best fitness: 280
+Gen 27 - Best fitness: 610
+Gen 28 - Best fitness: 540
+Gen 29 - Best fitness: 540
+Gen 30 - Best fitness: 530
+Gen 31 - Best fitness: 570
+Gen 32 - Best fitness: 530
+Gen 33 - Best fitness: 440
+Gen 34 - Best fitness: 730
+Gen 35 - Best fitness: 730
+Gen 36 - Best fitness: 600
+Gen 37 - Best fitness: 560
+Gen 38 - Best fitness: 540
+Gen 39 - Best fitness: 410
+Best timetable saved to timetable_ga.json
+
+
+2025-08-15 05:13:02 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 830
+Gen 1 - Best fitness: 770
+Gen 2 - Best fitness: 860
+Gen 3 - Best fitness: 770
+Gen 4 - Best fitness: 710
+Gen 5 - Best fitness: 680
+Gen 6 - Best fitness: 730
+Gen 7 - Best fitness: 700
+Gen 8 - Best fitness: 610
+Gen 9 - Best fitness: 660
+Gen 10 - Best fitness: 700
+Gen 11 - Best fitness: 660
+Gen 12 - Best fitness: 560
+Gen 13 - Best fitness: 530
+Gen 14 - Best fitness: 630
+Gen 15 - Best fitness: 430
+Gen 16 - Best fitness: 690
+Gen 17 - Best fitness: 660
+Gen 18 - Best fitness: 830
+Gen 19 - Best fitness: 630
+Gen 20 - Best fitness: 600
+Gen 21 - Best fitness: 670
+Gen 22 - Best fitness: 570
+Gen 23 - Best fitness: 670
+Gen 24 - Best fitness: 600
+Gen 25 - Best fitness: 560
+Gen 26 - Best fitness: 330
+Gen 27 - Best fitness: 670
+Gen 28 - Best fitness: 570
+Gen 29 - Best fitness: 660
+Gen 30 - Best fitness: 440
+Gen 31 - Best fitness: 640
+Gen 32 - Best fitness: 280
+Gen 33 - Best fitness: 710
+Gen 34 - Best fitness: 330
+Gen 35 - Best fitness: 630
+Gen 36 - Best fitness: 430
+Gen 37 - Best fitness: 530
+Gen 38 - Best fitness: 660
+Gen 39 - Best fitness: 600
+Best timetable saved to timetable_ga.json
+
+
+2025-08-15 05:13:53 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 720
+Gen 1 - Best fitness: 880
+Gen 2 - Best fitness: 850
+Gen 3 - Best fitness: 720
+Gen 4 - Best fitness: 750
+Gen 5 - Best fitness: 850
+Gen 6 - Best fitness: 780
+Gen 7 - Best fitness: 750
+Gen 8 - Best fitness: 780
+Gen 9 - Best fitness: 820
+Gen 10 - Best fitness: 630
+Gen 11 - Best fitness: 780
+Gen 12 - Best fitness: 720
+Gen 13 - Best fitness: 820
+Gen 14 - Best fitness: 620
+Gen 15 - Best fitness: 560
+Gen 16 - Best fitness: 590
+Gen 17 - Best fitness: 550
+Gen 18 - Best fitness: 400
+Gen 19 - Best fitness: 700
+Gen 20 - Best fitness: 360
+Gen 21 - Best fitness: 690
+Gen 22 - Best fitness: 680
+Gen 23 - Best fitness: 460
+Gen 24 - Best fitness: 820
+Gen 25 - Best fitness: 650
+Gen 26 - Best fitness: 520
+Gen 27 - Best fitness: 620
+Gen 28 - Best fitness: 610
+Gen 29 - Best fitness: 690
+Gen 30 - Best fitness: 810
+Gen 31 - Best fitness: 430
+Gen 32 - Best fitness: 490
+Gen 33 - Best fitness: 480
+Gen 34 - Best fitness: 480
+Gen 35 - Best fitness: 650
+Gen 36 - Best fitness: 490
+Gen 37 - Best fitness: 700
+Gen 38 - Best fitness: 650
+Gen 39 - Best fitness: 620
+Best timetable saved to timetable_ga.json
+
+
+2025-08-15 05:16:29 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 850
+Gen 1 - Best fitness: 820
+Gen 2 - Best fitness: 910
+Gen 3 - Best fitness: 820
+Gen 4 - Best fitness: 880
+Gen 5 - Best fitness: 820
+Gen 6 - Best fitness: 880
+Gen 7 - Best fitness: 840
+Gen 8 - Best fitness: 850
+Gen 9 - Best fitness: 750
+Gen 10 - Best fitness: 820
+Gen 11 - Best fitness: 720
+Gen 12 - Best fitness: 690
+Gen 13 - Best fitness: 750
+Gen 14 - Best fitness: 760
+Gen 15 - Best fitness: 690
+Gen 16 - Best fitness: 690
+Gen 17 - Best fitness: 720
+Gen 18 - Best fitness: 560
+Gen 19 - Best fitness: 590
+Gen 20 - Best fitness: 650
+Gen 21 - Best fitness: 690
+Gen 22 - Best fitness: 780
+Gen 23 - Best fitness: 880
+Gen 24 - Best fitness: 550
+Gen 25 - Best fitness: 520
+Gen 26 - Best fitness: 490
+Gen 27 - Best fitness: 590
+Gen 28 - Best fitness: 450
+Gen 29 - Best fitness: 880
+Gen 30 - Best fitness: 520
+Gen 31 - Best fitness: 620
+Gen 32 - Best fitness: 680
+Gen 33 - Best fitness: 720
+Gen 34 - Best fitness: 660
+Gen 35 - Best fitness: 520
+Gen 36 - Best fitness: 680
+Gen 37 - Best fitness: 780
+Gen 38 - Best fitness: 660
+Gen 39 - Best fitness: 620
+Best timetable saved to timetable.json
+
+
+2025-08-15 06:14:49 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 750
+Gen 1 - Best fitness: 790
+Gen 2 - Best fitness: 760
+Gen 3 - Best fitness: 850
+Gen 4 - Best fitness: 760
+Gen 5 - Best fitness: 820
+Gen 6 - Best fitness: 780
+Gen 7 - Best fitness: 790
+Gen 8 - Best fitness: 670
+Gen 9 - Best fitness: 720
+Gen 10 - Best fitness: 820
+Gen 11 - Best fitness: 630
+Gen 12 - Best fitness: 730
+Gen 13 - Best fitness: 730
+Gen 14 - Best fitness: 790
+Gen 15 - Best fitness: 500
+Gen 16 - Best fitness: 730
+Gen 17 - Best fitness: 720
+Gen 18 - Best fitness: 720
+Gen 19 - Best fitness: 530
+Gen 20 - Best fitness: 630
+Gen 21 - Best fitness: 660
+Gen 22 - Best fitness: 790
+Gen 23 - Best fitness: 720
+Gen 24 - Best fitness: 700
+Gen 25 - Best fitness: 690
+Gen 26 - Best fitness: 790
+Gen 27 - Best fitness: 790
+Gen 28 - Best fitness: 620
+Gen 29 - Best fitness: 530
+Gen 30 - Best fitness: 570
+Gen 31 - Best fitness: 600
+Gen 32 - Best fitness: 850
+Gen 33 - Best fitness: 570
+Gen 34 - Best fitness: 560
+Gen 35 - Best fitness: 670
+Gen 36 - Best fitness: 730
+Gen 37 - Best fitness: 700
+Gen 38 - Best fitness: 700
+Gen 39 - Best fitness: 630
+Best timetable saved to timetable.json
+
+
+2025-08-15 07:42:28 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 790
+Gen 1 - Best fitness: 820
+Gen 2 - Best fitness: 850
+Gen 3 - Best fitness: 850
+Gen 4 - Best fitness: 880
+Gen 5 - Best fitness: 910
+Gen 6 - Best fitness: 820
+Gen 7 - Best fitness: 910
+Gen 8 - Best fitness: 650
+Gen 9 - Best fitness: 850
+Gen 10 - Best fitness: 750
+Gen 11 - Best fitness: 630
+Gen 12 - Best fitness: 880
+Gen 13 - Best fitness: 750
+Gen 14 - Best fitness: 750
+Gen 15 - Best fitness: 750
+Gen 16 - Best fitness: 790
+Gen 17 - Best fitness: 730
+Gen 18 - Best fitness: 590
+Gen 19 - Best fitness: 690
+Gen 20 - Best fitness: 620
+Gen 21 - Best fitness: 720
+Gen 22 - Best fitness: 780
+Gen 23 - Best fitness: 690
+Gen 24 - Best fitness: 660
+Gen 25 - Best fitness: 780
+Gen 26 - Best fitness: 650
+Gen 27 - Best fitness: 680
+Gen 28 - Best fitness: 780
+Gen 29 - Best fitness: 580
+Gen 30 - Best fitness: 690
+Gen 31 - Best fitness: 560
+Gen 32 - Best fitness: 620
+Gen 33 - Best fitness: 530
+Gen 34 - Best fitness: 330
+Gen 35 - Best fitness: 430
+Gen 36 - Best fitness: 620
+Gen 37 - Best fitness: 450
+Gen 38 - Best fitness: 620
+Gen 39 - Best fitness: 500
+Best timetable saved to timetable.json
+
+
+2025-08-15 07:42:42 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 790
+Gen 1 - Best fitness: 880
+Gen 2 - Best fitness: 880
+Gen 3 - Best fitness: 880
+Gen 4 - Best fitness: 910
+Gen 5 - Best fitness: 880
+Gen 6 - Best fitness: 850
+Gen 7 - Best fitness: 820
+Gen 8 - Best fitness: 720
+Gen 9 - Best fitness: 720
+Gen 10 - Best fitness: 850
+Gen 11 - Best fitness: 880
+Gen 12 - Best fitness: 780
+Gen 13 - Best fitness: 720
+Gen 14 - Best fitness: 650
+Gen 15 - Best fitness: 750
+Gen 16 - Best fitness: 880
+Gen 17 - Best fitness: 650
+Gen 18 - Best fitness: 750
+Gen 19 - Best fitness: 780
+Gen 20 - Best fitness: 820
+Gen 21 - Best fitness: 660
+Gen 22 - Best fitness: 680
+Gen 23 - Best fitness: 620
+Gen 24 - Best fitness: 790
+Gen 25 - Best fitness: 650
+Gen 26 - Best fitness: 680
+Gen 27 - Best fitness: 720
+Gen 28 - Best fitness: 650
+Gen 29 - Best fitness: 780
+Gen 30 - Best fitness: 750
+Gen 31 - Best fitness: 590
+Gen 32 - Best fitness: 430
+Gen 33 - Best fitness: 470
+Gen 34 - Best fitness: 590
+Gen 35 - Best fitness: 490
+Gen 36 - Best fitness: 680
+Gen 37 - Best fitness: 680
+Gen 38 - Best fitness: 710
+Gen 39 - Best fitness: 540
+Best timetable saved to timetable.json
+
+
+2025-09-05 06:21:12 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 820
+Gen 1 - Best fitness: 850
+Gen 2 - Best fitness: 850
+Gen 3 - Best fitness: 780
+Gen 4 - Best fitness: 740
+Gen 5 - Best fitness: 840
+Gen 6 - Best fitness: 680
+Gen 7 - Best fitness: 650
+Gen 8 - Best fitness: 710
+Gen 9 - Best fitness: 650
+Gen 10 - Best fitness: 620
+Gen 11 - Best fitness: 590
+Gen 12 - Best fitness: 750
+Gen 13 - Best fitness: 650
+Gen 14 - Best fitness: 650
+Gen 15 - Best fitness: 590
+Gen 16 - Best fitness: 620
+Gen 17 - Best fitness: 750
+Gen 18 - Best fitness: 560
+Gen 19 - Best fitness: 580
+Gen 20 - Best fitness: 590
+Gen 21 - Best fitness: 630
+Gen 22 - Best fitness: 300
+Gen 23 - Best fitness: 690
+Gen 24 - Best fitness: 590
+Gen 25 - Best fitness: 420
+Gen 26 - Best fitness: 580
+Gen 27 - Best fitness: 610
+Gen 28 - Best fitness: 390
+Gen 29 - Best fitness: 790
+Gen 30 - Best fitness: 720
+Gen 31 - Best fitness: 650
+Gen 32 - Best fitness: 750
+Gen 33 - Best fitness: 620
+Gen 34 - Best fitness: 450
+Gen 35 - Best fitness: 550
+Gen 36 - Best fitness: 720
+Gen 37 - Best fitness: 720
+Gen 38 - Best fitness: 690
+Gen 39 - Best fitness: 750
+Best timetable saved to timetable.json
+
+
+2025-09-05 06:28:47 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 750
+Gen 1 - Best fitness: 850
+Gen 2 - Best fitness: 880
+Gen 3 - Best fitness: 790
+Gen 4 - Best fitness: 720
+Gen 5 - Best fitness: 820
+Gen 6 - Best fitness: 790
+Gen 7 - Best fitness: 720
+Gen 8 - Best fitness: 720
+Gen 9 - Best fitness: 620
+Gen 10 - Best fitness: 880
+Gen 11 - Best fitness: 580
+Gen 12 - Best fitness: 750
+Gen 13 - Best fitness: 590
+Gen 14 - Best fitness: 790
+Gen 15 - Best fitness: 620
+Gen 16 - Best fitness: 650
+Gen 17 - Best fitness: 450
+Gen 18 - Best fitness: 760
+Gen 19 - Best fitness: 520
+Gen 20 - Best fitness: 560
+Gen 21 - Best fitness: 720
+Gen 22 - Best fitness: 720
+Gen 23 - Best fitness: 680
+Gen 24 - Best fitness: 680
+Gen 25 - Best fitness: 750
+Gen 26 - Best fitness: 520
+Gen 27 - Best fitness: 650
+Gen 28 - Best fitness: 750
+Gen 29 - Best fitness: 850
+Gen 30 - Best fitness: 720
+Gen 31 - Best fitness: 430
+Gen 32 - Best fitness: 760
+Gen 33 - Best fitness: 720
+Gen 34 - Best fitness: 720
+Gen 35 - Best fitness: 720
+Gen 36 - Best fitness: 750
+Gen 37 - Best fitness: 750
+Gen 38 - Best fitness: 650
+Gen 39 - Best fitness: 650
+Best timetable saved to timetable.json
+
+
+2025-09-05 06:30:58 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 560
+Gen 1 - Best fitness: 560
+Gen 2 - Best fitness: 660
+Gen 3 - Best fitness: 590
+Gen 4 - Best fitness: 660
+Gen 5 - Best fitness: 760
+Gen 6 - Best fitness: 660
+Gen 7 - Best fitness: 730
+Gen 8 - Best fitness: 560
+Gen 9 - Best fitness: 630
+Gen 10 - Best fitness: 630
+Gen 11 - Best fitness: 520
+Gen 12 - Best fitness: 560
+Gen 13 - Best fitness: 530
+Gen 14 - Best fitness: 760
+Gen 15 - Best fitness: 760
+Gen 16 - Best fitness: 760
+Gen 17 - Best fitness: 660
+Gen 18 - Best fitness: 400
+Gen 19 - Best fitness: 530
+Gen 20 - Best fitness: 530
+Gen 21 - Best fitness: 430
+Gen 22 - Best fitness: 530
+Gen 23 - Best fitness: 560
+Gen 24 - Best fitness: 660
+Gen 25 - Best fitness: 660
+Gen 26 - Best fitness: 630
+Gen 27 - Best fitness: 660
+Gen 28 - Best fitness: 720
+Gen 29 - Best fitness: 600
+Gen 30 - Best fitness: 530
+Gen 31 - Best fitness: 430
+Gen 32 - Best fitness: 590
+Gen 33 - Best fitness: 530
+Gen 34 - Best fitness: 690
+Gen 35 - Best fitness: 460
+Gen 36 - Best fitness: 660
+Gen 37 - Best fitness: 570
+Gen 38 - Best fitness: 630
+Gen 39 - Best fitness: 470
+Best timetable saved to timetable.json
+
+
+2025-09-05 07:04:31 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 530
+Gen 1 - Best fitness: 820
+Gen 2 - Best fitness: 600
+Gen 3 - Best fitness: 790
+Gen 4 - Best fitness: 790
+Gen 5 - Best fitness: 790
+Gen 6 - Best fitness: 760
+Gen 7 - Best fitness: 690
+Gen 8 - Best fitness: 530
+Gen 9 - Best fitness: 700
+Gen 10 - Best fitness: 790
+Gen 11 - Best fitness: 760
+Gen 12 - Best fitness: 730
+Gen 13 - Best fitness: 660
+Gen 14 - Best fitness: 720
+Gen 15 - Best fitness: 720
+Gen 16 - Best fitness: 660
+Gen 17 - Best fitness: 600
+Gen 18 - Best fitness: 720
+Gen 19 - Best fitness: 620
+Gen 20 - Best fitness: 720
+Gen 21 - Best fitness: 660
+Gen 22 - Best fitness: 760
+Gen 23 - Best fitness: 880
+Gen 24 - Best fitness: 560
+Gen 25 - Best fitness: 660
+Gen 26 - Best fitness: 760
+Gen 27 - Best fitness: 700
+Gen 28 - Best fitness: 700
+Gen 29 - Best fitness: 560
+Gen 30 - Best fitness: 530
+Gen 31 - Best fitness: 560
+Gen 32 - Best fitness: 730
+Gen 33 - Best fitness: 570
+Gen 34 - Best fitness: 600
+Gen 35 - Best fitness: 340
+Gen 36 - Best fitness: 570
+Gen 37 - Best fitness: 750
+Gen 38 - Best fitness: 630
+Gen 39 - Best fitness: 690
+Best timetable saved to timetable.json
+
+
+2025-09-05 08:13:16 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 660
+Gen 1 - Best fitness: 660
+Gen 2 - Best fitness: 690
+Gen 3 - Best fitness: 690
+Gen 4 - Best fitness: 790
+Gen 5 - Best fitness: 760
+Gen 6 - Best fitness: 530
+Gen 7 - Best fitness: 630
+Gen 8 - Best fitness: 730
+Gen 9 - Best fitness: 790
+Gen 10 - Best fitness: 790
+Gen 11 - Best fitness: 790
+Gen 12 - Best fitness: 760
+Gen 13 - Best fitness: 560
+Gen 14 - Best fitness: 620
+Gen 15 - Best fitness: 580
+Gen 16 - Best fitness: 690
+Gen 17 - Best fitness: 600
+Gen 18 - Best fitness: 730
+Gen 19 - Best fitness: 750
+Gen 20 - Best fitness: 720
+Gen 21 - Best fitness: 590
+Gen 22 - Best fitness: 630
+Gen 23 - Best fitness: 720
+Gen 24 - Best fitness: 600
+Gen 25 - Best fitness: 340
+Gen 26 - Best fitness: 570
+Gen 27 - Best fitness: 540
+Gen 28 - Best fitness: 500
+Gen 29 - Best fitness: 530
+Gen 30 - Best fitness: 430
+Gen 31 - Best fitness: 560
+Gen 32 - Best fitness: 590
+Gen 33 - Best fitness: 660
+Gen 34 - Best fitness: 660
+Gen 35 - Best fitness: 520
+Gen 36 - Best fitness: 620
+Gen 37 - Best fitness: 660
+Gen 38 - Best fitness: 720
+Gen 39 - Best fitness: 760
+Best timetable saved to timetable.json
+
+
+2025-09-05 08:18:24 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 530
+Gen 1 - Best fitness: 750
+Gen 2 - Best fitness: 750
+Gen 3 - Best fitness: 690
+Gen 4 - Best fitness: 820
+Gen 5 - Best fitness: 760
+Gen 6 - Best fitness: 660
+Gen 7 - Best fitness: 660
+Gen 8 - Best fitness: 820
+Gen 9 - Best fitness: 850
+Gen 10 - Best fitness: 630
+Gen 11 - Best fitness: 600
+Gen 12 - Best fitness: 790
+Gen 13 - Best fitness: 790
+Gen 14 - Best fitness: 630
+Gen 15 - Best fitness: 590
+Gen 16 - Best fitness: 490
+Gen 17 - Best fitness: 690
+Gen 18 - Best fitness: 330
+Gen 19 - Best fitness: 630
+Gen 20 - Best fitness: 600
+Gen 21 - Best fitness: 730
+Gen 22 - Best fitness: 750
+Gen 23 - Best fitness: 730
+Gen 24 - Best fitness: 660
+Gen 25 - Best fitness: 620
+Gen 26 - Best fitness: 500
+Gen 27 - Best fitness: 690
+Gen 28 - Best fitness: 620
+Gen 29 - Best fitness: 420
+Gen 30 - Best fitness: 720
+Gen 31 - Best fitness: 690
+Gen 32 - Best fitness: 690
+Gen 33 - Best fitness: 650
+Gen 34 - Best fitness: 690
+Gen 35 - Best fitness: 660
+Gen 36 - Best fitness: 630
+Gen 37 - Best fitness: 720
+Gen 38 - Best fitness: 590
+Gen 39 - Best fitness: 590
+Best timetable saved to timetable.json
+
+
+2025-09-05 08:20:13 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 390
+Gen 1 - Best fitness: 520
+Gen 2 - Best fitness: 620
+Gen 3 - Best fitness: 750
+Gen 4 - Best fitness: 820
+Gen 5 - Best fitness: 730
+Gen 6 - Best fitness: 530
+Gen 7 - Best fitness: 340
+Gen 8 - Best fitness: 470
+Gen 9 - Best fitness: 400
+Gen 10 - Best fitness: 790
+Gen 11 - Best fitness: 490
+Gen 12 - Best fitness: 620
+Gen 13 - Best fitness: 450
+Gen 14 - Best fitness: 760
+Gen 15 - Best fitness: 790
+Gen 16 - Best fitness: 760
+Gen 17 - Best fitness: 600
+Gen 18 - Best fitness: 660
+Gen 19 - Best fitness: 660
+Gen 20 - Best fitness: 750
+Gen 21 - Best fitness: 690
+Gen 22 - Best fitness: 590
+Gen 23 - Best fitness: 500
+Gen 24 - Best fitness: 370
+Gen 25 - Best fitness: 470
+Gen 26 - Best fitness: 630
+Gen 27 - Best fitness: 700
+Gen 28 - Best fitness: 660
+Gen 29 - Best fitness: 370
+Gen 30 - Best fitness: 600
+Gen 31 - Best fitness: 600
+Gen 32 - Best fitness: 590
+Gen 33 - Best fitness: 460
+Gen 34 - Best fitness: 500
+Gen 35 - Best fitness: 330
+Gen 36 - Best fitness: 200
+Gen 37 - Best fitness: 500
+Gen 38 - Best fitness: 660
+Gen 39 - Best fitness: 660
+Best timetable saved to timetable.json
+
+
+2025-09-05 16:36:52 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 590
+Gen 1 - Best fitness: 460
+Gen 2 - Best fitness: 630
+Gen 3 - Best fitness: 790
+Gen 4 - Best fitness: 850
+Gen 5 - Best fitness: 470
+Gen 6 - Best fitness: 600
+Gen 7 - Best fitness: 600
+Gen 8 - Best fitness: 630
+Gen 9 - Best fitness: 440
+Gen 10 - Best fitness: 730
+Gen 11 - Best fitness: 670
+Gen 12 - Best fitness: 440
+Gen 13 - Best fitness: 510
+Gen 14 - Best fitness: 500
+Gen 15 - Best fitness: 560
+Gen 16 - Best fitness: 620
+Gen 17 - Best fitness: 730
+Gen 18 - Best fitness: 650
+Gen 19 - Best fitness: 820
+Gen 20 - Best fitness: 520
+Gen 21 - Best fitness: 400
+Gen 22 - Best fitness: 600
+Gen 23 - Best fitness: 790
+Gen 24 - Best fitness: 660
+Gen 25 - Best fitness: 500
+Gen 26 - Best fitness: 570
+Gen 27 - Best fitness: 570
+Gen 28 - Best fitness: 700
+Gen 29 - Best fitness: 560
+Gen 30 - Best fitness: 530
+Gen 31 - Best fitness: 530
+Gen 32 - Best fitness: 630
+Gen 33 - Best fitness: 460
+Gen 34 - Best fitness: 560
+Gen 35 - Best fitness: 630
+Gen 36 - Best fitness: 630
+Gen 37 - Best fitness: 730
+Gen 38 - Best fitness: 700
+Gen 39 - Best fitness: 500
+Best timetable saved to timetable.json
+
+
+2025-09-05 17:08:17 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 151, in <module>
+    population.sort(key=lambda ind: fitness(ind), reverse=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 151, in <lambda>
+    population.sort(key=lambda ind: fitness(ind), reverse=True)
+                                    ~~~~~~~^^^^^
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 83, in fitness
+    start_time = parse_time_str(start_str)
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 14, in parse_time_str
+    return datetime.strptime(t_str, "%H:%M")
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Rijan\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 789, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rijan\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 558, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+                      data_string[found.end():])
+ValueError: unconverted data remains:  AM 
+
+
+2025-09-05 17:08:26 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 151, in <module>
+    population.sort(key=lambda ind: fitness(ind), reverse=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 151, in <lambda>
+    population.sort(key=lambda ind: fitness(ind), reverse=True)
+                                    ~~~~~~~^^^^^
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 83, in fitness
+    start_time = parse_time_str(start_str)
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 14, in parse_time_str
+    return datetime.strptime(t_str, "%H:%M")
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Rijan\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 789, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rijan\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 558, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+                      data_string[found.end():])
+ValueError: unconverted data remains:  AM 
+
+
+2025-09-05 17:08:31 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 151, in <module>
+    population.sort(key=lambda ind: fitness(ind), reverse=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 151, in <lambda>
+    population.sort(key=lambda ind: fitness(ind), reverse=True)
+                                    ~~~~~~~^^^^^
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 83, in fitness
+    start_time = parse_time_str(start_str)
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 14, in parse_time_str
+    return datetime.strptime(t_str, "%H:%M")
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Rijan\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 789, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rijan\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 558, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+                      data_string[found.end():])
+ValueError: unconverted data remains:  AM 
+
+
+2025-09-05 17:08:42 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 151, in <module>
+    population.sort(key=lambda ind: fitness(ind), reverse=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 151, in <lambda>
+    population.sort(key=lambda ind: fitness(ind), reverse=True)
+                                    ~~~~~~~^^^^^
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 83, in fitness
+    start_time = parse_time_str(start_str)
+  File "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py", line 14, in parse_time_str
+    return datetime.strptime(t_str, "%H:%M")
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Rijan\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 789, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rijan\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 558, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+                      data_string[found.end():])
+ValueError: unconverted data remains:  AM 
+
+
+2025-09-05 17:12:27 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 660
+Gen 1 - Best fitness: 660
+Gen 2 - Best fitness: 720
+Gen 3 - Best fitness: 720
+Gen 4 - Best fitness: 730
+Gen 5 - Best fitness: 750
+Gen 6 - Best fitness: 730
+Gen 7 - Best fitness: 660
+Gen 8 - Best fitness: 730
+Gen 9 - Best fitness: 630
+Gen 10 - Best fitness: 730
+Gen 11 - Best fitness: 760
+Gen 12 - Best fitness: 690
+Gen 13 - Best fitness: 690
+Gen 14 - Best fitness: 690
+Gen 15 - Best fitness: 620
+Gen 16 - Best fitness: 790
+Gen 17 - Best fitness: 560
+Gen 18 - Best fitness: 500
+Gen 19 - Best fitness: 500
+Gen 20 - Best fitness: 570
+Gen 21 - Best fitness: 760
+Gen 22 - Best fitness: 590
+Gen 23 - Best fitness: 460
+Gen 24 - Best fitness: 520
+Gen 25 - Best fitness: 520
+Gen 26 - Best fitness: 500
+Gen 27 - Best fitness: 330
+Gen 28 - Best fitness: 430
+Gen 29 - Best fitness: 630
+Gen 30 - Best fitness: 720
+Gen 31 - Best fitness: 680
+Gen 32 - Best fitness: 470
+Gen 33 - Best fitness: 590
+Gen 34 - Best fitness: 530
+Gen 35 - Best fitness: 660
+Gen 36 - Best fitness: 660
+Gen 37 - Best fitness: 730
+Gen 38 - Best fitness: 820
+Gen 39 - Best fitness: 680
+Best timetable saved to timetable.json
+
+
+2025-09-05 17:16:33 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 620
+Gen 1 - Best fitness: 660
+Gen 2 - Best fitness: 790
+Gen 3 - Best fitness: 850
+Gen 4 - Best fitness: 790
+Gen 5 - Best fitness: 790
+Gen 6 - Best fitness: 790
+Gen 7 - Best fitness: 600
+Gen 8 - Best fitness: 530
+Gen 9 - Best fitness: 760
+Gen 10 - Best fitness: 670
+Gen 11 - Best fitness: 730
+Gen 12 - Best fitness: 430
+Gen 13 - Best fitness: 530
+Gen 14 - Best fitness: 560
+Gen 15 - Best fitness: 750
+Gen 16 - Best fitness: 790
+Gen 17 - Best fitness: 760
+Gen 18 - Best fitness: 690
+Gen 19 - Best fitness: 730
+Gen 20 - Best fitness: 690
+Gen 21 - Best fitness: 690
+Gen 22 - Best fitness: 730
+Gen 23 - Best fitness: 530
+Gen 24 - Best fitness: 790
+Gen 25 - Best fitness: 630
+Gen 26 - Best fitness: 720
+Gen 27 - Best fitness: 620
+Gen 28 - Best fitness: 690
+Gen 29 - Best fitness: 530
+Gen 30 - Best fitness: 360
+Gen 31 - Best fitness: 590
+Gen 32 - Best fitness: 590
+Gen 33 - Best fitness: 490
+Gen 34 - Best fitness: 650
+Gen 35 - Best fitness: 690
+Gen 36 - Best fitness: 620
+Gen 37 - Best fitness: 660
+Gen 38 - Best fitness: 760
+Gen 39 - Best fitness: 620
+Best timetable saved to timetable.json
+
+
+2025-09-05 20:36:17 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 690
+Gen 1 - Best fitness: 940
+Gen 2 - Best fitness: 790
+Gen 3 - Best fitness: 750
+Gen 4 - Best fitness: 780
+Gen 5 - Best fitness: 760
+Gen 6 - Best fitness: 660
+Gen 7 - Best fitness: 660
+Gen 8 - Best fitness: 660
+Gen 9 - Best fitness: 590
+Gen 10 - Best fitness: 520
+Gen 11 - Best fitness: 790
+Gen 12 - Best fitness: 820
+Gen 13 - Best fitness: 490
+Gen 14 - Best fitness: 590
+Gen 15 - Best fitness: 590
+Gen 16 - Best fitness: 550
+Gen 17 - Best fitness: 780
+Gen 18 - Best fitness: 720
+Gen 19 - Best fitness: 590
+Gen 20 - Best fitness: 850
+Gen 21 - Best fitness: 820
+Gen 22 - Best fitness: 660
+Gen 23 - Best fitness: 790
+Gen 24 - Best fitness: 690
+Gen 25 - Best fitness: 650
+Gen 26 - Best fitness: 780
+Gen 27 - Best fitness: 650
+Gen 28 - Best fitness: 690
+Gen 29 - Best fitness: 680
+Gen 30 - Best fitness: 710
+Gen 31 - Best fitness: 660
+Gen 32 - Best fitness: 690
+Gen 33 - Best fitness: 650
+Gen 34 - Best fitness: 590
+Gen 35 - Best fitness: 660
+Gen 36 - Best fitness: 720
+Gen 37 - Best fitness: 590
+Gen 38 - Best fitness: 690
+Gen 39 - Best fitness: 580
+Best timetable saved to timetable.json
+
+
+2025-09-06 09:17:55 | Command: C:^\Windows^\py.exe "C:\xampp\htdocs\dcsp\sub_admin\genetic_algorithm.py"
+Gen 0 - Best fitness: 750
+Gen 1 - Best fitness: 840
+Gen 2 - Best fitness: 880
+Gen 3 - Best fitness: 880
+Gen 4 - Best fitness: 690
+Gen 5 - Best fitness: 750
+Gen 6 - Best fitness: 850
+Gen 7 - Best fitness: 720
+Gen 8 - Best fitness: 580
+Gen 9 - Best fitness: 750
+Gen 10 - Best fitness: 720
+Gen 11 - Best fitness: 820
+Gen 12 - Best fitness: 720
+Gen 13 - Best fitness: 790
+Gen 14 - Best fitness: 610
+Gen 15 - Best fitness: 490
+Gen 16 - Best fitness: 660
+Gen 17 - Best fitness: 790
+Gen 18 - Best fitness: 720
+Gen 19 - Best fitness: 560
+Gen 20 - Best fitness: 720
+Gen 21 - Best fitness: 490
+Gen 22 - Best fitness: 660
+Gen 23 - Best fitness: 620
+Gen 24 - Best fitness: 720
+Gen 25 - Best fitness: 520
+Gen 26 - Best fitness: 850
+Gen 27 - Best fitness: 720
+Gen 28 - Best fitness: 550
+Gen 29 - Best fitness: 680
+Gen 30 - Best fitness: 690
+Gen 31 - Best fitness: 720
+Gen 32 - Best fitness: 780
+Gen 33 - Best fitness: 590
+Gen 34 - Best fitness: 880
+Gen 35 - Best fitness: 790
+Gen 36 - Best fitness: 750
+Gen 37 - Best fitness: 850
+Gen 38 - Best fitness: 350
+Gen 39 - Best fitness: 650
+Best timetable saved to timetable.json
+
+

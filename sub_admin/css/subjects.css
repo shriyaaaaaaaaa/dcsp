@@ -1,0 +1,37 @@
+/* Scoped styles for subjects.php */
+.subjects-page {
+    background: #f8f9fa;
+}
+
+.subjects-page .card-form {
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.subjects-page .fade-out {
+    animation: fadeOut 3s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.subjects-page .subject-tag {
+    background: #e9ecef;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .subjects-page .card-form {
+        padding: 15px;
+    }
+}

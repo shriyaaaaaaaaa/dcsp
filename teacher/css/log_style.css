@@ -1,0 +1,33 @@
+/* Background and form styling */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/login.jpg') no-repeat center center/cover;
+  backdrop-filter: blur(3px);
+  padding: 20px;
+}
+
+.login-card {
+  background-color: rgba(255, 255, 255, 0.3); /* 30% transparent white */
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+}
+
+input::placeholder {
+  color: #555;
+}
+
+.btn-success {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    padding: 20px;
+  }
+}

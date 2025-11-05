@@ -1,0 +1,146 @@
+/* Container Styling */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9fb;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+/* Scrollable Subject Container */
+.subjects-container {
+    max-height: 300px; /* Set max height to enable scroll */
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+/* 3-column layout using flexbox */
+.subjects-container .subject-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px; /* row-gap, column-gap */
+}
+
+.subjects-container .subject-item {
+    width: calc(33.333% - 20px); /* 3 columns with spacing */
+    display: flex;
+    align-items: center;
+}
+
+/* Headings */
+h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Form Fields */
+.form-label {
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="time"],
+select,
+textarea {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 15px;
+}
+
+input[type="text"]:focus,
+input[type="time"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+/* Subject Checkbox Grid */
+.subjects-container .row {
+    margin: 0 -10px;
+}
+
+.subjects-container .col-md-3 {
+    padding: 5px 10px;
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+.form-check-label {
+    cursor: pointer;
+    font-weight: 400;
+}
+
+/* Time Range Row */
+.time-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.time-field {
+    flex: 1;
+}
+
+.dash {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-group .btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 8px;
+    font-size: 15px;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+}
+
+/* Auto-fade alerts */
+.fade-out {
+    animation: fadeOut 3s ease-out 2s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .subjects-container .subject-item {
+        width: calc(50% - 20px); /* 2 columns */
+    }
+}
+@media (max-width: 480px) {
+    .subjects-container .subject-item {
+        width: 100%; /* 1 column */
+    }
+}

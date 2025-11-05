@@ -1,0 +1,35 @@
+.register-page {
+  min-height: 100vh;
+  background: url('../img/s_register.jpeg') no-repeat center center/cover;
+  padding: 30px;
+  backdrop-filter: blur(2px);
+}
+
+.register-card {
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 25px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  color: #000;
+}
+
+.form-control::placeholder {
+  color: #555;
+}
+
+.btn-primary {
+  font-weight: bold;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .register-card {
+    padding: 20px;
+  }
+}
+

@@ -1,0 +1,98 @@
+/* footer.css */
+.footer {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  flex-shrink: 0;
+
+}
+
+
+.footer-logo {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+.footer-left {
+  max-width: 280px;
+}
+
+.tagline {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.iso-logo {
+  margin-top: 20px;
+  width: 100px;
+}
+
+.footer-section h3 {
+  color: #00d1c1;
+  margin-bottom: 12px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Make html and body full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* The wrapper fills viewport height and uses flexbox */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Main content grows to fill available space */
+main {
+  flex: 1;
+}
+
+/* Footer styling */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  /* Footer will naturally stick at bottom because main flex:1 takes rest of height */
+}

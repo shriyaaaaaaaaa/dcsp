@@ -1,0 +1,163 @@
+/* Scoped styles for member_list.php */
+.member_list-page .member-section {
+    padding: 30px 15px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Section headers */
+.member_list-page .member-section h2,
+.member_list-page .member-section h3 {
+    font-weight: 600;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Scrollable member card */
+.member_list-page .member-card {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.member_list-page .member-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling with forced block display and fixed layout */
+.member_list-page .member-card table {
+    width: 100%;
+    border-collapse: collapse;
+    display: table; /* Reset to table display for proper layout */
+    table-layout: fixed; /* Ensure columns respect defined widths */
+}
+
+/* Table header styling */
+.member_list-page .member-card th {
+    background-color: #ecf0f1;
+    padding: 12px 15px;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Data cell styling */
+.member_list-page .member-card td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+    font-size: 14px;
+    color: #34495e;
+    transition: background-color 0.3s ease;
+}
+
+.member_list-page .member-card tr:hover td {
+    background-color: #f8f9fa;
+}
+
+/* Data column (first column) to fill available space */
+.member_list-page .member-card td:first-child {
+    width: 100%; /* Allow data to take remaining space */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Action cell styling */
+.member_list-page .action-cell {
+    text-align: right;
+    padding-right: 20px;
+    width: 60px; /* Fixed width for action column */
+    white-space: nowrap;
+}
+
+/* Delete button styling */
+.member_list-page .delete-btn {
+    color: #e74c3c;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.member_list-page .delete-btn:hover {
+    color: #c0392b;
+    transform: scale(1.2);
+}
+
+/* Custom scrollbar */
+.member_list-page .member-card::-webkit-scrollbar {
+    width: 10px;
+}
+
+.member_list-page .member-card::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.member_list-page .member-card::-webkit-scrollbar-thumb {
+    background-color: #bdc3c7;
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+}
+
+.member_list-page .member-card::-webkit-scrollbar-thumb:hover {
+    background: #95a5a6;
+}
+
+/* Buttons */
+.member_list-page .table-actions .btn {
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.member_list-page .table-actions .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Done button */
+.member_list-page .btn-success {
+    font-size: 16px;
+    padding: 12px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    background-color: #27ae60;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.member_list-page .btn-success:hover {
+    background-color: #219653;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .member_list-page .member-card {
+        max-height: 300px;
+    }
+    .member_list-page .btn-success {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .member_list-page .action-cell {
+        width: 50px; /* Slightly smaller on mobile */
+    }
+}

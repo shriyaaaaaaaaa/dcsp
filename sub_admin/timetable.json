@@ -1,0 +1,86 @@
+[
+  {
+    "class": "BCA 1st sem",
+    "subject": "Database Management",
+    "teacher": "Test4",
+    "time": "11:00"
+  },
+  {
+    "class": "BCA 1st sem",
+    "subject": "GIS",
+    "teacher": "test1",
+    "time": "12:00"
+  },
+  {
+    "class": "BCA 1st sem",
+    "subject": "Micro-Processor",
+    "teacher": "Test3",
+    "time": "13:00"
+  },
+  {
+    "class": "BCA 2nd sem class",
+    "subject": "Database Management",
+    "teacher": "Test4",
+    "time": "11:00"
+  },
+  {
+    "class": "BCA 2nd sem class",
+    "subject": "GIS",
+    "teacher": "Test3",
+    "time": "15:00"
+  },
+  {
+    "class": "BCA 2nd sem class",
+    "subject": "Micro-Processor",
+    "teacher": "Test3",
+    "time": "14:00"
+  },
+  {
+    "class": "BCA 2nd sem class",
+    "subject": "Operating Systems",
+    "teacher": "Test6",
+    "time": "12:00"
+  },
+  {
+    "class": "BCA 3rd sem",
+    "subject": "GIS",
+    "teacher": "test1",
+    "time": "11:00"
+  },
+  {
+    "class": "BCA 3rd sem",
+    "subject": "Programming in C",
+    "teacher": "Test5",
+    "time": "10:00"
+  },
+  {
+    "class": "BCA 3rd sem",
+    "subject": "Web Technologies",
+    "teacher": "Test5",
+    "time": "13:00"
+  },
+  {
+    "class": "BCA 4th sem",
+    "subject": "GIS",
+    "teacher": "Test3",
+    "time": "12:00"
+  },
+  {
+    "class": "BCA 4th sem",
+    "subject": "Operating Systems",
+    "teacher": "Test4",
+    "time": "13:00"
+  },
+  {
+    "class": "BCA 4th sem",
+    "subject": "Programming in C",
+    "teacher": "Test5",
+    "time": "14:00"
+  },
+  {
+    "class": "BCA 4th sem",
+    "subject": "Information Security",
+    "teacher": "Test2",
+    "time": "16:00"
+  }
+]

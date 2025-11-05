@@ -1,0 +1,189 @@
+{
+    "organization": "Ratna Rajhya ",
+    "classes": [
+        {
+            "id": 1,
+            "class_name": "BCA 1st sem",
+            "subjects": [
+                "Database Management",
+                "GIS",
+                "Micro-Processor"
+            ],
+            "start_time": "10:00",
+            "end_time": "15:00"
+        },
+        {
+            "id": 2,
+            "class_name": "BCA 2nd sem class",
+            "subjects": [
+                "Database Management",
+                "GIS",
+                "Micro-Processor",
+                "Operating Systems"
+            ],
+            "start_time": "11:00",
+            "end_time": "16:00"
+        },
+        {
+            "id": 3,
+            "class_name": "BCA 3rd sem",
+            "subjects": [
+                "GIS",
+                "Programming in C",
+                "Web Technologies"
+            ],
+            "start_time": "10:00",
+            "end_time": "16:00"
+        },
+        {
+            "id": 4,
+            "class_name": "BCA 4th sem",
+            "subjects": [
+                "GIS",
+                "Operating Systems",
+                "Programming in C",
+                "Information Security"
+            ],
+            "start_time": "12:00",
+            "end_time": "18:00"
+        }
+    ],
+    "teachers": [
+        {
+            "id": 15,
+            "reg_no": "1",
+            "name": "test1",
+            "department": "BCA",
+            "subjects": [
+                "GIS",
+                "Database Management"
+            ],
+            "available": [
+                "10:00-11:00",
+                "09:00-10:00",
+                "11:00-12:00",
+                "12:00-13:00"
+            ],
+            "phone": "9866123377",
+            "email": "test1@gmail.com"
+        },
+        {
+            "id": 16,
+            "reg_no": "2",
+            "name": "Test2",
+            "department": "BCA",
+            "subjects": [
+                "Operating Systems",
+                "GIS",
+                "Information Security"
+            ],
+            "available": [
+                "14:00-15:00",
+                "12:00-13:00",
+                "10:00-11:00",
+                "16:00-17:00"
+            ],
+            "phone": "9866123377",
+            "email": "test2@gmail.com"
+        },
+        {
+            "id": 17,
+            "reg_no": "3",
+            "name": "Test3",
+            "department": "BCA",
+            "subjects": [
+                "Micro-Processor",
+                "Data Structures",
+                "Advance Dotnet",
+                "GIS"
+            ],
+            "available": [
+                "16:00-17:00",
+                "15:00-16:00",
+                "14:00-15:00",
+                "12:00-13:00",
+                "11:00-12:00"
+            ],
+            "phone": "9866123377",
+            "email": "test3@gmail.com"
+        },
+        {
+            "id": 18,
+            "reg_no": "4",
+            "name": "Test4",
+            "department": "BCA",
+            "subjects": [
+                "Operating Systems",
+                "Advance Dotnet",
+                "Database Management"
+            ],
+            "available": [
+                "09:00-10:00",
+                "10:00-11:00",
+                "11:00-12:00",
+                "12:00-13:00"
+            ],
+            "phone": "9844046079",
+            "email": "test4@gmail.com"
+        },
+        {
+            "id": 19,
+            "reg_no": "5",
+            "name": "Test5",
+            "department": "BCA",
+            "subjects": [
+                "Operating Systems",
+                "Web Technologies",
+                "GIS",
+                "Programming in C"
+            ],
+            "available": [
+                "10:00-11:00",
+                "12:00-13:00",
+                "14:00-15:00",
+                "11:00-12:00",
+                "15:00-16:00"
+            ],
+            "phone": "9844046079",
+            "email": "test5@gmail.com"
+        },
+        {
+            "id": 20,
+            "reg_no": "6",
+            "name": "Test6",
+            "department": "BCA",
+            "subjects": [
+                "Operating Systems"
+            ],
+            "available": [
+                "10:00-11:00"
+            ],
+            "phone": "9761789679",
+            "email": "test6@gmail.com"
+        },
+        {
+            "id": 21,
+            "reg_no": "0016",
+            "name": "Anushka badal",
+            "department": "Civil Engineering",
+            "subjects": [
+                "Construction Materials"
+            ],
+            "available": [
+                "10:00-11:00"
+            ],
+            "phone": "9866123377",
+            "email": "anushka@gmail.com"
+        },
+        {
+            "id": 22,
+            "reg_no": "7",
+            "name": "Rijan Subedi",
+            "department": "MBA",
+            "subjects": [],
+            "available": [],
+            "phone": "9844046079",
+            "email": "test7@gmail.com"
+        }
+    ]
+}

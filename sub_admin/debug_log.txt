@@ -1,0 +1,96 @@
+2025-08-06 17:17:13 - Class ID 2: class_name=BCA 2nd sem class, subjects=Database Management,Advance Java,Operating Systems,Programming in C,Web Technologies, start_time=10:00, end_time=00:00
+2025-08-06 17:17:32 - Class ID 2: class_name=BCA 2nd sem class, subjects=Database Management,Advance Java,Operating Systems,Programming in C,Web Technologies, start_time=10:00, end_time=00:00
+2025-08-06 17:17:32 - Form Submission: class_name=BCA 2nd sem class, subjects=Operating Systems,Programming in C,Web Technologies, start_time=11:00, end_time=16:00
+2025-08-06 17:17:35 - Class ID 2: class_name=BCA 2nd sem class, subjects=Operating Systems,Programming in C,Web Technologies, start_time=11:00, end_time=00:00
+2025-08-06 17:17:53 - Class ID 2: class_name=BCA 2nd sem class, subjects=Operating Systems,Programming in C,Web Technologies, start_time=11:00, end_time=00:00
+2025-08-06 17:17:53 - Form Submission: class_name=BCA 2nd sem class, subjects=Operating Systems,Programming in C,Web Technologies, start_time=11:00, end_time=17:00
+2025-08-06 17:19:46 - Class ID 2: class_name=BCA 2nd sem class, subjects=Operating Systems,Programming in C,Web Technologies, start_time=11:00, end_time=00:00
+2025-08-06 17:24:23 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"Operating Systems,Programming in C,Web Technologies","start_time":"11:00","end_time":"00:00"}
+2025-08-06 17:24:44 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"Operating Systems,Programming in C,Web Technologies","start_time":"11:00","end_time":"00:00"}
+2025-08-06 17:24:44 - Submitted: class_name=BCA 2nd sem class, subjects=GIS,Operating Systems,Programming in C,Web Technologies, start_time=11:00, end_time=16:00
+2025-08-06 17:24:49 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"GIS,Operating Systems,Programming in C,Web Technologies","start_time":"11:00","end_time":"16:00"}
+2025-08-06 17:24:55 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"GIS,Operating Systems,Programming in C,Web Technologies","start_time":"11:00","end_time":"16:00"}
+2025-08-06 17:24:55 - Submitted: class_name=BCA 2nd sem class, subjects=GIS,Micro-Processor,Programming in C, start_time=11:00, end_time=16:00
+2025-08-06 17:27:15 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"GIS,Micro-Processor,Programming in C","start_time":"11:00","end_time":"16:00"}
+2025-08-06 17:28:04 - Class ID 1 fetched: {"class_name":"BCA 1st","subjects":"Database Management,Micro-Processor","start_time":"10:00","end_time":"00:00"}
+2025-08-06 17:31:10 - Class ID 1 fetched: {"class_name":"BCA 1st","subjects":"Database Management,Micro-Processor","start_time":"10:00","end_time":"00:00"}
+2025-08-06 17:31:46 - Class ID 1 fetched: {"class_name":"BCA 1st","subjects":"Database Management,Micro-Processor","start_time":"10:00","end_time":"00:00"}
+2025-08-06 17:31:46 - Submitted: class_name=BCA 1st, subjects=Database Management,Micro-Processor, start_time=10:00, end_time=15:00
+2025-08-06 17:31:51 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"GIS,Micro-Processor,Programming in C","start_time":"11:00","end_time":"16:00"}
+2025-08-06 17:33:01 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"GIS,Micro-Processor,Programming in C","start_time":"11:00","end_time":"16:00"}
+2025-08-06 17:34:31 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"GIS,Micro-Processor,Programming in C","start_time":"11:00","end_time":"16:00"}
+2025-08-06 17:36:18 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"GIS,Micro-Processor,Programming in C","start_time":"11:00","end_time":"16:00"}
+2025-08-06 17:37:07 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"GIS,Micro-Processor,Programming in C","start_time":"11:00","end_time":"16:00"}
+2025-08-06 17:38:10 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"GIS,Micro-Processor,Programming in C","start_time":"11:00","end_time":"16:00"}
+2025-08-06 20:56:38 - Class ID 1 fetched: {"class_name":"BCA 1st","subjects":"Database Management,Micro-Processor","start_time":"10:00","end_time":"15:00"}
+2025-08-06 20:56:44 - Class ID 1 fetched: {"class_name":"BCA 1st","subjects":"Database Management,Micro-Processor","start_time":"10:00","end_time":"15:00"}
+2025-08-06 20:56:44 - Submitted: class_name=BCA 1st sem, subjects=Database Management,Micro-Processor, start_time=10:00, end_time=15:00
+2025-08-07 12:37:01 - Class ID 1 fetched: {"class_name":"BCA 1st sem","subjects":"Database Management,Micro-Processor","start_time":"10:00","end_time":"15:00"}
+2025-08-07 12:37:18 - Class ID 1 fetched: {"class_name":"BCA 1st sem","subjects":"Database Management,Micro-Processor","start_time":"10:00","end_time":"15:00"}
+2025-08-07 12:37:18 - Submitted: class_name=BCA 1st sem, subjects=Database Management,GIS,Micro-Processor, start_time=10:00, end_time=15:00
+2025-08-07 12:37:21 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"GIS,Micro-Processor,Programming in C","start_time":"11:00","end_time":"16:00"}
+2025-08-07 12:37:45 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"GIS,Micro-Processor,Programming in C","start_time":"11:00","end_time":"16:00"}
+2025-08-07 12:37:45 - Submitted: class_name=BCA 2nd sem class, subjects=GIS,Micro-Processor,Advance Dotnet,Advance Java, start_time=11:00, end_time=16:00
+2025-08-07 12:37:48 - Class ID 3 fetched: {"class_name":"BCA 3rd sem","subjects":"GIS,Operating Systems,Web Technologies","start_time":"10:00","end_time":"16:00"}
+2025-08-07 12:37:57 - Class ID 3 fetched: {"class_name":"BCA 3rd sem","subjects":"GIS,Operating Systems,Web Technologies","start_time":"10:00","end_time":"16:00"}
+2025-08-07 12:37:57 - Submitted: class_name=BCA 3rd sem, subjects=GIS,Operating Systems,Programming in C,Information Security,Web Technologies, start_time=10:00, end_time=16:00
+2025-08-07 12:37:59 - Class ID 4 fetched: {"class_name":"BCA 4th sem","subjects":"Database Management,GIS","start_time":"12:00","end_time":"18:00"}
+2025-08-07 12:38:11 - Class ID 4 fetched: {"class_name":"BCA 4th sem","subjects":"Database Management,GIS","start_time":"12:00","end_time":"18:00"}
+2025-08-07 12:38:11 - Submitted: class_name=BCA 4th sem, subjects=GIS,Advance Java,Operating Systems,Information Security, start_time=12:00, end_time=18:00
+2025-08-08 11:25:16 - Class ID 6 fetched: {"class_name":"Class 12","subjects":"Construction Materials,Environmental Engineering,Hydraulics","start_time":"10:00","end_time":"16:00"}
+2025-08-08 11:28:13 - Class ID 6 fetched: {"class_name":"Class 12","subjects":"Construction Materials,Environmental Engineering,Hydraulics","start_time":"10:00","end_time":"16:00"}
+2025-08-09 17:37:20 - Class ID 4 fetched: {"class_name":"BCA 4th sem","subjects":"GIS,Advance Java,Operating Systems,Information Security","start_time":"12:00","end_time":"18:00"}
+2025-08-12 08:43:49 - Class ID 6 fetched: {"class_name":"Class 12","subjects":"Construction Materials,Environmental Engineering,Hydraulics","start_time":"10:00","end_time":"16:00"}
+2025-08-12 08:43:58 - Class ID 6 fetched: {"class_name":"Class 12","subjects":"Construction Materials,Environmental Engineering,Hydraulics","start_time":"10:00","end_time":"16:00"}
+2025-08-12 14:00:01 - Class ID 5 fetched: {"class_name":"BIT 1st year","subjects":"Advance Java","start_time":"10:00","end_time":"17:30"}
+2025-08-12 14:50:11 - Class ID 6 fetched: {"class_name":"Class 12","subjects":"Construction Materials,Environmental Engineering,Hydraulics","start_time":"10:00","end_time":"16:00"}
+2025-08-12 14:53:48 - Class ID 6 fetched: {"class_name":"Class 12","subjects":"Construction Materials,Environmental Engineering,Hydraulics","start_time":"10:00","end_time":"16:00"}
+2025-08-12 14:53:53 - Class ID 6 fetched: {"class_name":"Class 12","subjects":"Construction Materials,Environmental Engineering,Hydraulics","start_time":"10:00","end_time":"16:00"}
+2025-08-12 14:54:05 - Class ID 6 fetched: {"class_name":"Class 12","subjects":"Construction Materials,Environmental Engineering,Hydraulics","start_time":"10:00","end_time":"16:00"}
+2025-08-12 15:03:45 - Table 'education_home_17' created successfully.
+2025-08-12 15:55:52 - Class ID 5 fetched: {"class_name":"BIT 1st year","subjects":"Advance Java","start_time":"10:00","end_time":"17:30"}
+2025-08-12 15:56:00 - Class ID 5 fetched: {"class_name":"BIT 1st year","subjects":"Advance Java","start_time":"10:00","end_time":"17:30"}
+2025-08-12 15:56:00 - Submitted: class_name=BIT 1st year, subjects=Database Management, start_time=10:00, end_time=17:30
+2025-08-12 15:56:01 - Class ID 7 fetched: {"class_name":"BCA test","subjects":"Advance Java","start_time":"10:00","end_time":"16:00"}
+2025-08-12 15:56:03 - Class ID 7 fetched: {"class_name":"BCA test","subjects":"Advance Java","start_time":"10:00","end_time":"16:00"}
+2025-08-12 15:56:03 - Submitted: class_name=BCA test, subjects=Advance Java,GIS, start_time=10:00, end_time=16:00
+2025-08-12 15:57:26 - Class ID 5 fetched: {"class_name":"BIT 1st year","subjects":"Database Management","start_time":"10:00","end_time":"17:30"}
+2025-08-12 15:57:42 - Class ID 5 fetched: {"class_name":"BIT 1st year","subjects":"Database Management","start_time":"10:00","end_time":"17:30"}
+2025-08-12 15:57:42 - Submitted: class_name=BIT 1st year, subjects=Database Management, start_time=11:00, end_time=17:30
+2025-08-12 17:11:10 - Class ID 7 fetched: {"class_name":"BCA test","subjects":"Advance Java,GIS","start_time":"10:00","end_time":"16:00"}
+2025-08-12 17:11:19 - Class ID 7 fetched: {"class_name":"BCA test","subjects":"Advance Java,GIS","start_time":"10:00","end_time":"16:00"}
+2025-08-12 17:11:19 - Submitted: class_name=BCA test, subjects=Advance Java,GIS, start_time=13:00, end_time=16:00
+2025-08-12 17:11:57 - Class ID 7 fetched: {"class_name":"BCA test","subjects":"Advance Java,GIS","start_time":"13:00","end_time":"16:00"}
+2025-08-12 17:12:06 - Class ID 7 fetched: {"class_name":"BCA test","subjects":"Advance Java,GIS","start_time":"13:00","end_time":"16:00"}
+2025-08-12 17:12:06 - Submitted: class_name=BCA test, subjects=Advance Java,GIS, start_time=12:00, end_time=16:00
+2025-08-12 17:12:21 - Class ID 5 fetched: {"class_name":"BIT 1st year","subjects":"Database Management","start_time":"11:00","end_time":"17:30"}
+2025-08-12 17:12:25 - Class ID 7 fetched: {"class_name":"BCA test","subjects":"Advance Java,GIS","start_time":"12:00","end_time":"16:00"}
+2025-08-12 17:12:38 - Class ID 7 fetched: {"class_name":"BCA test","subjects":"Advance Java,GIS","start_time":"12:00","end_time":"16:00"}
+2025-08-12 17:12:38 - Submitted: class_name=BCA test, subjects=Advance Java,GIS, start_time=09:00, end_time=16:00
+2025-08-12 17:48:29 - Class ID 3 fetched: {"class_name":"BCA 3rd sem","subjects":"GIS,Operating Systems,Programming in C,Information Security,Web Technologies","start_time":"10:00","end_time":"16:00"}
+2025-08-12 17:48:35 - Class ID 3 fetched: {"class_name":"BCA 3rd sem","subjects":"GIS,Operating Systems,Programming in C,Information Security,Web Technologies","start_time":"10:00","end_time":"16:00"}
+2025-08-12 17:48:35 - Submitted: class_name=BCA 3rd sem, subjects=GIS,Programming in C,Web Technologies, start_time=10:00, end_time=16:00
+2025-08-15 05:09:21 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"GIS,Micro-Processor,Advance Dotnet,Advance Java","start_time":"11:00","end_time":"16:00"}
+2025-08-15 05:09:30 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"GIS,Micro-Processor,Advance Dotnet,Advance Java","start_time":"11:00","end_time":"16:00"}
+2025-08-15 05:09:30 - Submitted: class_name=BCA 2nd sem class, subjects=Database Management,GIS,Micro-Processor,Advance Dotnet,Operating Systems, start_time=11:00, end_time=16:00
+2025-08-15 05:13:24 - Class ID 4 fetched: {"class_name":"BCA 4th sem","subjects":"GIS,Advance Java,Operating Systems,Information Security","start_time":"12:00","end_time":"18:00"}
+2025-08-15 05:13:30 - Class ID 4 fetched: {"class_name":"BCA 4th sem","subjects":"GIS,Advance Java,Operating Systems,Information Security","start_time":"12:00","end_time":"18:00"}
+2025-08-15 05:13:30 - Submitted: class_name=BCA 4th sem, subjects=GIS,Operating Systems,Programming in C,Information Security, start_time=12:00, end_time=18:00
+2025-08-15 05:16:02 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"Database Management,GIS,Micro-Processor,Advance Dotnet,Operating Systems","start_time":"11:00","end_time":"16:00"}
+2025-08-15 05:16:08 - Class ID 2 fetched: {"class_name":"BCA 2nd sem class","subjects":"Database Management,GIS,Micro-Processor,Advance Dotnet,Operating Systems","start_time":"11:00","end_time":"16:00"}
+2025-08-15 05:16:08 - Submitted: class_name=BCA 2nd sem class, subjects=Database Management,GIS,Micro-Processor,Operating Systems, start_time=11:00, end_time=16:00
+2025-08-15 05:23:56 - Class ID 3 fetched: {"class_name":"BCA 3rd sem","subjects":"GIS,Programming in C,Web Technologies","start_time":"10:00","end_time":"16:00"}
+2025-08-15 05:25:29 - Class ID 3 fetched: {"class_name":"BCA 3rd sem","subjects":"GIS,Programming in C,Web Technologies","start_time":"10:00","end_time":"16:00"}
+2025-08-15 06:01:26 - Class ID 8 fetched: {"class_name":"BCA 1st sem","subjects":"Computer Fundamentals and Applications,Digital Logic,Mathematics-I,Professional Communication and Ethics,Programming in C","start_time":"09:00","end_time":"15:00"}
+2025-08-15 06:02:34 - Class ID 9 fetched: {"class_name":"BCA 2nd sem","subjects":"Discrete Structure,Mathematics-II,Micro-Processor,OOP in Java,UX\/UI Design","start_time":"10:00","end_time":"16:00"}
+2025-08-15 06:03:37 - Class ID 10 fetched: {"class_name":"BCA 3rd sem","subjects":"Applied Economics,Data Structure and Algorithms,Database Management System,Probability and Statistics,System Analysis and Design,Web Technology-I","start_time":"09:00","end_time":"16:00"}
+2025-09-05 08:17:47 - Class ID 10 fetched: {"class_name":"BCA 3rd sem","subjects":"Applied Economics,Data Structure and Algorithms,Database Management System,Probability and Statistics,System Analysis and Design,Web Technology-I","start_time":"09:00","end_time":"16:00"}
+2025-09-05 08:17:56 - Class ID 10 fetched: {"class_name":"BCA 3rd sem","subjects":"Applied Economics,Data Structure and Algorithms,Database Management System,Probability and Statistics,System Analysis and Design,Web Technology-I","start_time":"09:00","end_time":"16:00"}
+2025-09-05 08:17:56 - Submitted: class_name=BCA 3rd sem, subjects=Applied Economics,Data Structure and Algorithms,Database Management System,Probability and Statistics,System Analysis and Design, start_time=09:00, end_time=16:00
+2025-09-05 08:19:24 - Class ID 10 fetched: {"class_name":"BCA 3rd sem","subjects":"Applied Economics,Data Structure and Algorithms,Database Management System,Probability and Statistics,System Analysis and Design","start_time":"09:00","end_time":"16:00"}
+2025-09-05 08:19:30 - Class ID 10 fetched: {"class_name":"BCA 3rd sem","subjects":"Applied Economics,Data Structure and Algorithms,Database Management System,Probability and Statistics,System Analysis and Design","start_time":"09:00","end_time":"16:00"}
+2025-09-05 08:19:30 - Submitted: class_name=BCA 3rd sem, subjects=Applied Economics,Data Structure and Algorithms,Database Management System,Probability and Statistics,System Analysis and Design,Web Technology-I, start_time=09:00, end_time=16:00
+2025-09-05 16:36:22 - Class ID 10 fetched: {"class_name":"BCA 3rd sem","subjects":"Applied Economics,Data Structure and Algorithms,Database Management System,Probability and Statistics,System Analysis and Design,Web Technology-I","start_time":"09:00","end_time":"16:00"}
+2025-09-05 16:36:29 - Class ID 10 fetched: {"class_name":"BCA 3rd sem","subjects":"Applied Economics,Data Structure and Algorithms,Database Management System,Probability and Statistics,System Analysis and Design,Web Technology-I","start_time":"09:00","end_time":"16:00"}
+2025-09-05 16:36:29 - Submitted: class_name=BCA 3rd sem, subjects=Applied Economics,Data Structure and Algorithms,Database Management System,Probability and Statistics,System Analysis and Design,Web Technology-I, start_time=09:00, end_time=16:00
+2025-09-06 09:29:57 - Class ID 4 fetched: {"class_name":"BCA 4th sem","subjects":"GIS,Operating Systems,Programming in C,Information Security","start_time":"12:00","end_time":"18:00"}

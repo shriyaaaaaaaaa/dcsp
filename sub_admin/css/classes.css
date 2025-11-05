@@ -1,0 +1,50 @@
+/* Styling for class cards */
+.class-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: #007bff;
+}
+
+.class-title {
+    color: #343a40;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.class-detail {
+    color: #6c757d;
+    font-size: 1rem;
+    margin: 8px 0;
+}
+
+.class-detail strong {
+    color: #343a40;
+    font-weight: 500;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .class-card {
+        padding: 15px;
+    }
+
+    .class-title {
+        font-size: 1.3rem;
+    }
+
+    .class-detail {
+        font-size: 0.9rem;
+    }
+}
