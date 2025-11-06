@@ -549,7 +549,7 @@ CREATE TABLE `student` (
 INSERT INTO `student` (`id`, `reg_no`, `name`, `email`, `password`, `org_id`, `class`, `class_id`, `tick`, `created_at`) VALUES
 (2, 's100', 'Nishan Karki', 'nishan1@gmail.com', '12345', '14', '', 0, 1, '2025-06-12 01:19:32'),
 (3, 'p100', 'Pralhad Adhikari', 'p@gmail.com', '12345', '15', '', 0, 1, '2025-07-13 03:12:43'),
-(0, '400', 'Sathi mitra', 'sathi@gmail.com', '12345', '6', 'BCA 2nd sem class', 29, 0, '2025-09-06 07:23:23');
+(0, '400', 'Sathi mitra', 'sathi@gmail.com', '123456', '6', 'BCA 2nd sem class', 29, 0, '2025-09-06 07:23:23');
 
 -- --------------------------------------------------------
 

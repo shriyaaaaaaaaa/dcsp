@@ -23,6 +23,18 @@ if (isset($_SESSION['login_success'])) {
     unset($_SESSION['login_success']);
 }
 
+// Get comment success/error messages
+$comment_success = "";
+$comment_error = "";
+if (isset($_SESSION['comment_success'])) {
+    $comment_success = $_SESSION['comment_success'];
+    unset($_SESSION['comment_success']);
+}
+if (isset($_SESSION['comment_error'])) {
+    $comment_error = $_SESSION['comment_error'];
+    unset($_SESSION['comment_error']);
+}
+
 // Prepare and execute query to fetch teacher data
 $query = $conn->prepare("SELECT name, org_id, tick FROM teacher WHERE reg_no = ?");
 $query->bind_param("s", $teacher_id);
@@ -68,6 +80,7 @@ function convertTo12Hours($timeStr) {
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/t_dashboard.css" />
 </head>
 <body>
@@ -88,11 +101,29 @@ function convertTo12Hours($timeStr) {
 <!-- Body Section -->
 <div class="container py-5">
 
-  <!-- Success Message Alert -->
+  <!-- Login Success Message Alert -->
   <?php if ($success_message): ?>
     <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
       <i class="material-icons" style="font-size: 20px; vertical-align: middle;">check_circle</i>
       <strong><?= htmlspecialchars($success_message) ?></strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <?php endif; ?>
+
+  <!-- Comment Success Message -->
+  <?php if ($comment_success): ?>
+    <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+      <i class="material-icons" style="font-size: 20px; vertical-align: middle;">check_circle</i>
+      <strong><?= htmlspecialchars($comment_success) ?></strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <?php endif; ?>
+
+  <!-- Comment Error Message -->
+  <?php if ($comment_error): ?>
+    <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
+      <i class="material-icons" style="font-size: 20px; vertical-align: middle;">error</i>
+      <strong><?= htmlspecialchars($comment_error) ?></strong>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
   <?php endif; ?>
@@ -174,11 +205,35 @@ function convertTo12Hours($timeStr) {
   </div>
 
   <!-- Comment Box -->
-  <div class="comment-box text-end">
-      <form method="POST" action="comment.php">
-          <textarea class="form-control mb-2" name="comment" rows="2" placeholder="Leave a comment..." required></textarea>
-          <button type="submit" class="btn btn-primary">Comment</button>
-      </form>
+  <div class="comment-box mt-5">
+    <div class="card shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">
+          <i class="material-icons" style="vertical-align: middle;">comment</i>
+          Leave a Comment
+        </h5>
+      </div>
+      <div class="card-body">
+        <form method="POST" action="comment.php">
+          <div class="mb-3">
+            <label for="comment" class="form-label">Your Feedback</label>
+            <textarea 
+              class="form-control" 
+              id="comment"
+              name="comment" 
+              rows="4" 
+              placeholder="Share your thoughts about the schedule or suggest improvements..." 
+              required></textarea>
+          </div>
+          <div class="text-end">
+            <button type="submit" class="btn btn-primary">
+              <i class="material-icons" style="font-size: 18px; vertical-align: middle;">send</i>
+              Submit Comment
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -229,23 +284,24 @@ function convertTo12Hours($timeStr) {
     transform: translateY(0);
   }
 }
+.comment-box textarea {
+  resize: vertical;
+  min-height: 100px;
+}
 </style>
-
-<!-- Include Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-// Auto-hide success alert after 5 seconds
+// Auto-hide alerts after 5 seconds
 document.addEventListener('DOMContentLoaded', function() {
-  const alert = document.querySelector('.alert-success');
-  if (alert) {
+  const alerts = document.querySelectorAll('.alert');
+  alerts.forEach(function(alert) {
     setTimeout(function() {
       const bsAlert = new bootstrap.Alert(alert);
       bsAlert.close();
     }, 5000);
-  }
+  });
 });
 
 // Prevent back button issues and form resubmission

@@ -80,7 +80,7 @@
   <div class="container">
     <img src="img/logo.png" alt="DCSP Logo" class="hero-logo" style="width: 290px; animation:
       fadeInScale 1s ease-in-out;">
-    <h1 class="display-4 fw-bold">Welcome to DCSP</h1>
+    <h1 class="display-4 fw-bold">Welcome to RMS</h1>
 
     <!-- Initial Button -->
     <button onclick="showRoleOptions()" class="btn btn-danger btn-lg mt-3" id="getStartedBtn">Get Started</button>
@@ -149,7 +149,7 @@
         <div class="card h-100">
           <div class="card-body">
             <p class="card-text">"DCSP has transformed how we manage schedules. It's so intuitive!"</p>
-            <h6 class="card-subtitle text-muted mt-3">— Jane Doe, Educator</h6>
+            <h6 class="card-subtitle text-muted mt-3">— INDRA CHAUDHARY, Educator</h6>
           </div>
         </div>
       </div>
@@ -157,7 +157,7 @@
         <div class="card h-100">
           <div class="card-body">
             <p class="card-text">"The real-time updates save us so much time. Highly recommend!"</p>
-            <h6 class="card-subtitle text-muted mt-3">— John Smith, Administrator</h6>
+            <h6 class="card-subtitle text-muted mt-3">— SANTOSH SHARMA, Administrator</h6>
           </div>
         </div>
       </div>
@@ -165,7 +165,7 @@
         <div class="card h-100">
           <div class="card-body">
             <p class="card-text">"A game-changer for our institution. Simple and effective."</p>
-            <h6 class="card-subtitle text-muted mt-3">— Sarah Lee, Coordinator</h6>
+            <h6 class="card-subtitle text-muted mt-3">— LAXMAN, Coordinator</h6>
           </div>
         </div>
       </div>
