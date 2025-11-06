@@ -21,6 +21,11 @@ include('includes/header.php');
 $error = "";
 $success = "";
 
+if (isset($_SESSION['registration_success'])) {
+    $success = $_SESSION['registration_success'];
+    unset($_SESSION['registration_success']);
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = trim($_POST['email']);
   $password = trim($_POST['password']);
@@ -96,6 +101,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <?php endif; ?>
 
           <form method="POST" action="s_login.php" autocomplete="off">
+              <?php if ($success): ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <i class="material-icons" style="font-size: 20px; vertical-align: middle;">check_circle</i>
+                  <strong><?= htmlspecialchars($success) ?></strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              <?php endif; ?>
             <div class="mb-3">
               <label for="email" class="form-label">Email Address</label>
               <input 

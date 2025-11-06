@@ -1,13 +1,22 @@
 <?php
 session_start();
 
+// Prevent caching
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Pragma: no-cache");
+header("Expires: 0");
+
 // Clear all session data
 $_SESSION = [];
+
+// Destroy the session cookie
+if (isset($_COOKIE[session_name()])) {
+    setcookie(session_name(), '', time() - 3600, '/');
+}
+
+// Destroy session
 session_destroy();
-
-// Redirect to login page after a brief message
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,12 +53,13 @@ session_destroy();
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-5">
                 <div class="logout-card">
-                    <h3 class="text-center mb-4">Logged Out</h3>
+                    <h3 class="text-center mb-4">
+                        <i class="bi bi-check-circle text-success"></i> Logged Out
+                    </h3>
                     <div class="alert alert-success text-center">
-                        You have been successfully logged out.
+                        <strong>Success!</strong> You have been successfully logged out.
                     </div>
                     <p>Redirecting to login page...</p>
-                    
                 </div>
             </div>
         </div>
@@ -58,12 +68,22 @@ session_destroy();
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+    // Clear browser cache
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+    
+    // Prevent back button
+    window.history.pushState(null, null, window.location.href);
+    window.onpopstate = function() {
+        window.history.pushState(null, null, window.location.href);
+    };
+    
     // Redirect to login page after 2 seconds
     setTimeout(function() {
-        window.location.href = 't_login.php';
+        window.location.replace('t_login.php');
     }, 2000);
 </script>
 
-<?php include('includes/footer.php'); ?>
 </body>
 </html>
