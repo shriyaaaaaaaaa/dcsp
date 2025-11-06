@@ -129,9 +129,13 @@ function convertTo12Hours($timeStr) {
   <?php endif; ?>
 
   <!-- Class Schedule Section -->
-  <div id="home">
+  /*<div id="home">
     <div class="container py-5">
       <h3 class="section-title mb-4">📘 Class Schedules</h3>
+      <div class="d-flex justify-content-center gap-2 mb-3">
+  <button id="genBtn" class="btn btn-primary">Generate Schedule</button>
+  <span id="genMsg" class="align-self-center small text-muted"></span>
+</div>
 
       <div class="row g-4">
           <?php
@@ -196,7 +200,13 @@ function convertTo12Hours($timeStr) {
           <?php
               endwhile;
           else:
-              echo "<div class='alert alert-warning w-100 text-center'>⚠️ No schedule found for your organization yet. Please wait while the admin generates it.</div>";
+        echo "
+              <div class='w-100 text-center'>
+                <div class='alert alert-warning d-inline-block'>⚠️ No schedule found for your organization yet.</div><br>
+                <button id='genBtn' class='btn btn-primary'>Generate Schedule</button>
+                <div id='genMsg' class='small text-muted mt-2'></div>
+              </div>
+            ";
           endif;
           $sched_query->close();
           ?>
