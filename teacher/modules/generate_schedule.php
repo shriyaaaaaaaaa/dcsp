@@ -18,27 +18,54 @@ if (!isset($_SESSION['teacher_id'])) {
 header('Content-Type: application/json');
 
 // Fetch teacher org_id
-$teacher_reg = $_SESSION['teacher_id'];
-$stmt = $conn->prepare("SELECT org_id FROM teacher WHERE reg_no = ?");
-$stmt->bind_param("s", $teacher_reg);
+$teacher_key = $_SESSION['teacher_id'];
+$stmt = $conn->prepare("SELECT org_id FROM teacher WHERE reg_no = ? OR id = ? LIMIT 1");
+$stmt->bind_param("si", $teacher_key, $teacher_key);
 $stmt->execute();
 $res = $stmt->get_result();
 if ($res->num_rows === 0) {
-    echo json_encode(['ok' => false, 'error' => 'Teacher not found']);
+    echo json_encode(['ok'=>false,'error'=>'Teacher not found']);
     exit;
 }
 $org_id = intval($res->fetch_assoc()['org_id']);
 $stmt->close();
 
 // Fetch classes for this organization (classes.sub_admin_id is org id)
-$q = $conn->prepare("SELECT id, class_name, subjects, start_time, end_time FROM classes WHERE sub_admin_id = ?");
+
+// Fetch classes for this organization (classes.sub_admin_id == teacher.org_id)
+$q = $conn->prepare("
+  SELECT id, class_name, subjects, start_time, end_time
+  FROM classes
+  WHERE sub_admin_id = ?
+");
 $q->bind_param("i", $org_id);
 $q->execute();
 $rs = $q->get_result();
 $classes = [];
 while ($row = $rs->fetch_assoc()) {
     $classes[] = [
-        'id' => intval($row['id']),
+        'id' => (int)$row['id'],
+        'class_name' => $row['class_name'],
+        'subjects' => array_values(array_filter(array_map('trim', explode(',', (string)$row['subjects'])))),
+        'start_time' => $row['start_time'],
+        'end_time' => $row['end_time'],
+    ];
+}
+$q->close();
+// Fetch classes for this organization (via sub_admin → org_id)
+// Fetch classes for this organization (classes.sub_admin_id == teacher.org_id)
+$q = $conn->prepare("
+  SELECT id, class_name, subjects, start_time, end_time
+  FROM classes
+  WHERE sub_admin_id = ?
+");
+$q->bind_param("i", $org_id);
+$q->execute();
+$rs = $q->get_result();
+$classes = [];
+while ($row = $rs->fetch_assoc()) {
+    $classes[] = [
+        'id' => (int)$row['id'],
         'class_name' => $row['class_name'],
         'subjects' => array_values(array_filter(array_map('trim', explode(',', (string)$row['subjects'])))),
         'start_time' => $row['start_time'],
