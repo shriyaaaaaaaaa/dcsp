@@ -131,7 +131,7 @@
     <!-- Class Schedule Section -->
     <div id="home">
       <div class="container py-5">
-        <h3 class="section-title mb-4">📘 Class Schedules</h3>
+        <h1 class="section-title mb-4" style="color: white;">Class Schedules</h1>
         <div class="d-flex justify-content-center gap-2 mb-3">
     <button id="genBtn" class="btn btn-primary">Generate Schedule</button>
     <span id="genMsg" class="align-self-center small text-muted"></span>

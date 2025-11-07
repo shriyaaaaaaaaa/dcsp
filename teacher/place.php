@@ -26,8 +26,10 @@ $result = $conn->query($sql);
         .container-boxes {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: center;    
+            align-items: center;
             padding: 40px;
+            min-height: 100vh;
         }
 
         .place-box {

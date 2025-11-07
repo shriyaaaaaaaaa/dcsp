@@ -99,9 +99,8 @@ function convertTo12Hours($timeStr) {
     </div>
   <?php endif; ?>
 
-  <div id="home">
-    <h3 class="section-title mb-4 text-center">📅 Your Class Schedule</h3>
-
+  <div id="home" style="background-color: black;">
+    <h1 class="section-title mb-4 text-center" style="color: white;">Class Schedule</h1>
     <?php
     $sched_query = $conn->prepare("SELECT id, class_name, schedule_json, created_at 
                                    FROM schedule 

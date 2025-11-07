@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="footer-left">
-      <img src="img/logo.png" alt="DCPA Logo" class="footer-logo" style="width: 190px;" />
+      <img src="img/logo.png" alt="RMS Logo" class="footer-logo" style="width: 190px;" />
     <!-- <p class="tagline">Right Class, Right Time, Every Time.</p> -->
   </div>
 
@@ -25,9 +25,9 @@
 
   <div class="footer-section">
     <h3>Contact Us</h3>
-    <p>Address: Pepsicola, Kathmandu, Nepal</p>
-    <p>Email: info@dcpa.com</p>
-    <p>Support: support@dcpa.com</p>
+    <p>Address: Chabahil, Kathmandu, Nepal</p>
+    <p>Email: info@rms.com </p>
+    <p>Support: support@rms.com</p>
   </div>
 </footer>
 

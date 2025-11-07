@@ -91,6 +91,9 @@
     <a href="admin/admin_login.php" class="btn btn-outline-primary btn-lg mb-2 w-100">As Administrator</a>
     <a href="teacher/t_login.php" class="btn btn-outline-success btn-lg mb-2 w-100">As Teacher</a>
     <a href="student/s_login.php" class="btn btn-outline-secondary btn-lg w-100">As Student</a>
+    <a href="helpsupport/s_help_support.php" class="btn btn-outline-secondary btn-lg w-100">Helpsupport</a>
+
+
   </div>
 </div>
 
@@ -148,8 +151,8 @@
       <div class="col-md-4">
         <div class="card h-100">
           <div class="card-body">
-            <p class="card-text">"DCSP has transformed how we manage schedules. It's so intuitive!"</p>
-            <h6 class="card-subtitle text-muted mt-3">— INDRA CHAUDHARY, Educator</h6>
+            <p class="card-text">"RMS has transformed how we manage schedules. It's so intuitive!"</p>
+            <h6 class="card-subtitle text-muted mt-3">— Shreya Khatri, Educator</h6>
           </div>
         </div>
       </div>
@@ -157,7 +160,7 @@
         <div class="card h-100">
           <div class="card-body">
             <p class="card-text">"The real-time updates save us so much time. Highly recommend!"</p>
-            <h6 class="card-subtitle text-muted mt-3">— SANTOSH SHARMA, Administrator</h6>
+            <h6 class="card-subtitle text-muted mt-3">— Santoshi Magar, Administrator</h6>
           </div>
         </div>
       </div>
@@ -165,7 +168,7 @@
         <div class="card h-100">
           <div class="card-body">
             <p class="card-text">"A game-changer for our institution. Simple and effective."</p>
-            <h6 class="card-subtitle text-muted mt-3">— LAXMAN, Coordinator</h6>
+            <h6 class="card-subtitle text-muted mt-3">— Niticodes, Coordinator</h6>
           </div>
         </div>
       </div>
