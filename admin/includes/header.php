@@ -1,11 +1,14 @@
 <?php
-session_start();
-if (!isset($_SESSION['admin_id']) && basename($_SERVER['PHP_SELF']) != 'admin_login.php') {
-    header("Location: admin_login.php");
+if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
+
+$script = basename($_SERVER['SCRIPT_NAME']);
+$public = ['admin_login.php', 'logout.php'];
+
+if (!isset($_SESSION['admin_id']) && !in_array($script, $public, true)) {
+    header('Location: admin_login.php');
     exit();
 }
 ?>
-
 <!doctype html>
 <html lang="en">
   <head>

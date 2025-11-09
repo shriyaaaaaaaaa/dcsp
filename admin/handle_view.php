@@ -1,5 +1,5 @@
 <?php
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) { session_start(); }
 include('includes/db_connect.php');
 
 // Ensure admin is logged in

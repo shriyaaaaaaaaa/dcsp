@@ -93,6 +93,8 @@
         <a class="nav-link-box" href="t_dashboard.php">Home</a>
         <a class="nav-link-box" href="#home">Schedule</a>
         <a class="nav-link-box" href="t_profile.php">Profile</a>
+        <a class="nav-link-box" href="leave_request.php">Leave Request</a>
+
       </div>
     </div>
     <a href="t_logout.php" class="logout-btn">Logout</a>

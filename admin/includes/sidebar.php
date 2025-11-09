@@ -14,4 +14,9 @@
       </li>
       
     </ul>
+    <li class="nav-item mb-2">
+  <a class="nav-link d-flex align-items-center" href="leave_request.php">
+    <i data-feather="check-square" class="me-2"></i> Leave Requests
+  </a>
+</li>
   </nav>
