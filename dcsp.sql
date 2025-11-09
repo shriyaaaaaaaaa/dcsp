@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 07, 2025 at 07:56 AM
+-- Generation Time: Nov 09, 2025 at 03:29 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -135,7 +135,8 @@ INSERT INTO `comment` (`id`, `org_id`, `teacher_id`, `name`, `comment`, `date`) 
 (7, 13, 8, 'Rijan Subedi', 'vfcghcg', '2025-11-06 11:36:27'),
 (8, 13, 8, 'Rijan Subedi', 'fyfvu', '2025-11-06 12:13:49'),
 (9, 13, 8, 'Rijan Subedi', '1233', '2025-11-06 12:14:09'),
-(10, 13, 8, 'Rijan Subedi', 'ujjjjjjjjjjjjjjjjjjjj', '2025-11-07 10:06:01');
+(10, 13, 8, 'Rijan Subedi', 'ujjjjjjjjjjjjjjjjjjjj', '2025-11-07 10:06:01'),
+(11, 13, 8, 'Niticodes', 'jjjjjjjjjjjjjjjjjjjjj', '2025-11-07 12:48:56');
 
 -- --------------------------------------------------------
 
@@ -390,6 +391,54 @@ INSERT INTO `jaycess_13` (`id`, `org_name`, `sub_admin_id`, `teacher_reg`, `stud
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `leave_requests`
+--
+
+CREATE TABLE `leave_requests` (
+  `id` int(11) NOT NULL,
+  `teacher_id` int(11) NOT NULL,
+  `date_from` date NOT NULL,
+  `date_to` date NOT NULL,
+  `reason` text NOT NULL,
+  `subjects` text DEFAULT NULL,
+  `status` enum('PENDING','APPROVED','REJECTED') NOT NULL DEFAULT 'PENDING',
+  `admin_comment` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `leave_requests`
+--
+
+INSERT INTO `leave_requests` (`id`, `teacher_id`, `date_from`, `date_to`, `reason`, `subjects`, `status`, `admin_comment`, `created_at`, `updated_at`) VALUES
+(3, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:47:07', '2025-11-08 17:47:07'),
+(4, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:49:54', '2025-11-08 17:49:54'),
+(5, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:51:13', '2025-11-08 17:51:13'),
+(6, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:51:23', '2025-11-08 17:51:23'),
+(7, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:54:28', '2025-11-08 17:54:28'),
+(8, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:55:22', '2025-11-08 17:55:22'),
+(9, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:55:52', '2025-11-08 17:55:52'),
+(10, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:56:13', '2025-11-08 17:56:13'),
+(11, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:56:39', '2025-11-08 17:56:39'),
+(12, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:57:01', '2025-11-08 17:57:01'),
+(13, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:57:15', '2025-11-08 17:57:15'),
+(14, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:57:21', '2025-11-08 17:57:21'),
+(15, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:57:26', '2025-11-08 17:57:26'),
+(16, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:57:35', '2025-11-08 17:57:35'),
+(17, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:57:46', '2025-11-08 17:57:46'),
+(18, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:58:04', '2025-11-08 17:58:04'),
+(19, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:58:17', '2025-11-08 17:58:17'),
+(20, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 18:01:34', '2025-11-08 18:01:34'),
+(21, 8, '2025-11-01', '2025-11-19', 'byebye', 'Programming in C', 'PENDING', NULL, '2025-11-08 18:01:53', '2025-11-08 18:01:53'),
+(22, 8, '2025-11-01', '2025-11-19', 'byebye', 'Programming in C', 'PENDING', NULL, '2025-11-08 18:02:00', '2025-11-08 18:02:00'),
+(23, 8, '2025-11-01', '2025-11-19', 'byebye', 'Programming in C', 'APPROVED', '', '2025-11-08 18:06:39', '2025-11-09 02:27:53'),
+(24, 8, '2025-11-21', '2025-11-30', 'Dhangadhi', 'Programming in C', 'APPROVED', '', '2025-11-08 18:08:06', '2025-11-09 02:24:30'),
+(25, 8, '2025-11-09', '2025-11-12', 'kjjkkl', 'Programming in C', 'REJECTED', '', '2025-11-09 02:25:31', '2025-11-09 02:25:56');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `mvebs_19`
 --
 
@@ -482,8 +531,8 @@ INSERT INTO `schedule` (`id`, `org_id`, `class_name`, `schedule_json`, `created_
 (8, 14, 'BCA 1st sem', '[{\"time\":\"09:00-10:00\",\"subject\":\"Digital Logic\",\"teacher\":\"Shyam K\"},{\"time\":\"10:00-11:00\",\"subject\":\"Professional Communication and Ethics\",\"teacher\":\"Abhi Sharma\"}]', '2025-11-05 00:00:00'),
 (9, 14, 'BCA 2nd sem', '[{\"time\":\"10:00-11:00\",\"subject\":\"Discrete Structure\",\"teacher\":\"Shyam K\"},{\"time\":\"12:00-13:00\",\"subject\":\"Micro-Processor\",\"teacher\":\"Sashi Shyam\"}]', '2025-11-05 00:00:00'),
 (10, 14, 'BCA 3rd sem', '[{\"time\":\"09:00-10:00\",\"subject\":\"Database Management System\",\"teacher\":\"Ravi Ram\"},{\"time\":\"10:00-11:00\",\"subject\":\"Probability and Statistics\",\"teacher\":\"Rejeena Ghimire\"}]', '2025-11-05 00:00:00'),
-(45, 13, 'BIT 1st year', '[{\"time\":\"11:00-12:00\",\"subject\":\"Programming in C\",\"teacher\":\"Niticodes\"},{\"time\":\"11:00-12:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"},{\"time\":\"12:00-13:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Niticodes\"},{\"time\":\"12:00-13:00\",\"subject\":\"Database Management\",\"teacher\":\"Santosh Magar\"},{\"time\":\"13:00-14:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"},{\"time\":\"15:00-16:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"}]', '2025-11-07 12:35:47'),
-(46, 13, 'BCA test', '[{\"time\":\"09:00-10:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"},{\"time\":\"10:00-11:00\",\"subject\":\"Micro-Processor\",\"teacher\":\"Niticodes\"},{\"time\":\"11:00-12:00\",\"subject\":\"Database Management\",\"teacher\":\"Santosh Magar\"},{\"time\":\"12:00-13:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Niticodes\"},{\"time\":\"13:00-14:00\",\"subject\":\"GIS\",\"teacher\":\"Santosh Magar\"},{\"time\":\"14:00-15:00\",\"subject\":\"GIS\",\"teacher\":\"Santosh Magar\"},{\"time\":\"15:00-16:00\",\"subject\":\"Programming in C\",\"teacher\":\"Niticodes\"}]', '2025-11-07 12:35:49');
+(61, 13, 'BIT 1st year', '[{\"time\":\"11:00-12:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"},{\"time\":\"11:00-12:00\",\"subject\":\"Programming in C\",\"teacher\":\"Niticodes\"},{\"time\":\"12:00-13:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"},{\"time\":\"13:00-14:00\",\"subject\":\"Database Management\",\"teacher\":\"Santosh Magar\"},{\"time\":\"14:00-15:00\",\"subject\":\"Programming in C\",\"teacher\":\"Niticodes\"},{\"time\":\"15:00-16:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Niticodes\"}]', '2025-11-09 07:29:52'),
+(62, 13, 'BCA test', '[{\"time\":\"09:00-10:00\",\"subject\":\"Programming in C\",\"teacher\":\"Niticodes\"},{\"time\":\"10:00-11:00\",\"subject\":\"Database Management\",\"teacher\":\"Santosh Magar\"},{\"time\":\"11:00-12:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"},{\"time\":\"12:00-13:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Niticodes\"},{\"time\":\"13:00-14:00\",\"subject\":\"GIS\",\"teacher\":\"Santosh Magar\"},{\"time\":\"14:00-15:00\",\"subject\":\"Micro-Processor\",\"teacher\":\"Niticodes\"},{\"time\":\"15:00-16:00\",\"subject\":\"GIS\",\"teacher\":\"Santosh Magar\"}]', '2025-11-09 07:29:54');
 
 -- --------------------------------------------------------
 
@@ -616,6 +665,14 @@ ALTER TABLE `jaycess_13`
   ADD UNIQUE KEY `unique_student` (`student_reg`,`sub_admin_id`);
 
 --
+-- Indexes for table `leave_requests`
+--
+ALTER TABLE `leave_requests`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_leave_teacher` (`teacher_id`),
+  ADD KEY `idx_leave_status` (`status`);
+
+--
 -- Indexes for table `replies`
 --
 ALTER TABLE `replies`
@@ -628,6 +685,12 @@ ALTER TABLE `schedule`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `teacher`
+--
+ALTER TABLE `teacher`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -635,7 +698,13 @@ ALTER TABLE `schedule`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `leave_requests`
+--
+ALTER TABLE `leave_requests`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `replies`
@@ -647,7 +716,23 @@ ALTER TABLE `replies`
 -- AUTO_INCREMENT for table `schedule`
 --
 ALTER TABLE `schedule`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+
+--
+-- AUTO_INCREMENT for table `teacher`
+--
+ALTER TABLE `teacher`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `leave_requests`
+--
+ALTER TABLE `leave_requests`
+  ADD CONSTRAINT `fk_leave_teacher` FOREIGN KEY (`teacher_id`) REFERENCES `teacher` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
