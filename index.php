@@ -91,7 +91,7 @@
     <a href="admin/admin_login.php" class="btn btn-outline-primary btn-lg mb-2 w-100">As Administrator</a>
     <a href="teacher/t_login.php" class="btn btn-outline-success btn-lg mb-2 w-100">As Teacher</a>
     <a href="student/s_login.php" class="btn btn-outline-secondary btn-lg w-100">As Student</a>
-    <a href="helpsupport/s_help_support.php" class="btn btn-outline-secondary btn-lg w-100">Helpsupport</a>
+    <a href="helpsupport/s_help_support.php" class="btn btn-outline-secondary btn-lg mt-3">Help/support</a>
 
 
   </div>
