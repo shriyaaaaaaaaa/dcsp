@@ -14,7 +14,7 @@
 
   <li class="nav-item mb-2">
   <a class="nav-link d-flex align-items-center" href="leave_request.php">
-    <i data-feather="calendar" class="me-2"></i> Leave Requests
+    <i data-feather="calendar" class="me-2"></i>
   </a>
 </li>
 

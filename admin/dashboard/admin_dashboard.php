@@ -74,10 +74,10 @@ if ($stmt) {
 
     <!-- Pending Approvals Card -->
     <div class="col-md-4">
-      <a href="../pending_approvals.php" class="text-decoration-none">
+      <a href="../teacher_approvals.php" class="text-decoration-none">
         <div class="card text-white bg-warning mb-3" style="cursor: pointer;">
           <div class="card-body">
-            <h5 class="card-title">Pending Approvals</h5>
+            <h5 class="card-title">Teacher Approvals</h5>
             <p class="card-text display-4"><?= htmlspecialchars($pending_count) ?></p>
           </div>
         </div>
