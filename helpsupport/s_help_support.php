@@ -158,8 +158,4 @@
 </footer>
 
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> e901785 (registration)
