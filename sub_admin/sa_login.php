@@ -7,8 +7,6 @@ $input_email = isset($_POST['username']) ? htmlspecialchars(trim($_POST['usernam
 $success_message = isset($_SESSION['success_message']) ? $_SESSION['success_message'] : '';
 unset($_SESSION['success_message']);
 
-
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = filter_var(trim($_POST['username']), FILTER_SANITIZE_EMAIL);
     $password = $_POST['password'];
@@ -22,9 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_result($id, $org_name, $stored_password, $approval);
         $stmt->fetch();
 
-        if ($approval !== 1) {
+        // ✅ FIX: use != 1, or (int)$approval !== 1
+        if ($approval != 1) {
             $error = "Waiting for Admin Approval.";
         } elseif ($password === $stored_password) {
+            // If you later hash passwords, change to: password_verify($password, $stored_password)
             $_SESSION['sub_admin_id'] = $id;
             $_SESSION['org_name'] = $org_name;
             header("Location: sa_dashboard.php");
@@ -116,20 +116,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-5">
                 <div class="login-card position-relative p-4 shadow" style="border-radius: 1rem;">
-    <!-- Close Button Inside Top Right -->
-    <a href="../index.php" class="btn btn-sm btn-light position-absolute" style="top: 10px; right: 10px; border-radius: 50%; width: 32px; height: 32px; text-align: center; padding: 0;">
-        &times;
-    </a>
+                    <!-- Close Button Inside Top Right -->
+                    <a href="../index.php" class="btn btn-sm btn-light position-absolute" style="top: 10px; right: 10px; border-radius: 50%; width: 32px; height: 32px; text-align: center; padding: 0;">
+                        &times;
+                    </a>
 
-    <h3 class="text-center mb-4">Login to DCSP</h3>
+                    <h3 class="text-center mb-4">Login to DCSP</h3>
 
-    <?php if (!empty($success_message)): ?>
-        <div class="alert alert-success text-center"><?= htmlspecialchars($success_message) ?></div>
-    <?php endif; ?>
-    <?php if (!empty($error)): ?>
-        <div class="alert alert-danger text-center"><?= htmlspecialchars($error) ?></div>
-    <?php endif; ?>
-
+                    <?php if (!empty($success_message)): ?>
+                        <div class="alert alert-success text-center"><?= htmlspecialchars($success_message) ?></div>
+                    <?php endif; ?>
+                    <?php if (!empty($error)): ?>
+                        <div class="alert alert-danger text-center"><?= htmlspecialchars($error) ?></div>
+                    <?php endif; ?>
 
                     <form action="sa_login.php" method="POST">
                         <div class="mb-3">

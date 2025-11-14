@@ -1,9 +1,9 @@
 {
-    "organization": "Ratna Rajhya ",
+    "organization": "Jaycees  ",
     "classes": [
         {
             "id": 1,
-            "class_name": "BCA 1st sem",
+            "class_name": "Bsc.Csit 1st sem",
             "subjects": [
                 "Database Management",
                 "GIS",
@@ -14,7 +14,7 @@
         },
         {
             "id": 2,
-            "class_name": "BCA 2nd sem class",
+            "class_name": "Bsc.csit 2nd sem class",
             "subjects": [
                 "Database Management",
                 "GIS",
@@ -26,7 +26,7 @@
         },
         {
             "id": 3,
-            "class_name": "BCA 3rd sem",
+            "class_name": "Bsc.csit 3rd sem",
             "subjects": [
                 "GIS",
                 "Programming in C",
@@ -37,7 +37,7 @@
         },
         {
             "id": 4,
-            "class_name": "BCA 4th sem",
+            "class_name": " Bsc.csit4th sem",
             "subjects": [
                 "GIS",
                 "Operating Systems",
@@ -53,7 +53,7 @@
             "id": 15,
             "reg_no": "1",
             "name": "test1",
-            "department": "BCA",
+            "department": "Bsc.csit",
             "subjects": [
                 "GIS",
                 "Database Management"
@@ -71,7 +71,7 @@
             "id": 16,
             "reg_no": "2",
             "name": "Test2",
-            "department": "BCA",
+            "department": "Bsc.csit",
             "subjects": [
                 "Operating Systems",
                 "GIS",
@@ -90,7 +90,7 @@
             "id": 17,
             "reg_no": "3",
             "name": "Test3",
-            "department": "BCA",
+            "department": "Bsc.csit",
             "subjects": [
                 "Micro-Processor",
                 "Data Structures",
@@ -111,7 +111,7 @@
             "id": 18,
             "reg_no": "4",
             "name": "Test4",
-            "department": "BCA",
+            "department": "Bsc.csit",
             "subjects": [
                 "Operating Systems",
                 "Advance Dotnet",
@@ -130,7 +130,7 @@
             "id": 19,
             "reg_no": "5",
             "name": "Test5",
-            "department": "BCA",
+            "department": "Bsc.csit",
             "subjects": [
                 "Operating Systems",
                 "Web Technologies",
@@ -164,7 +164,7 @@
         {
             "id": 21,
             "reg_no": "0016",
-            "name": "Anushka badal",
+            "name": "Blueshriya",
             "department": "Civil Engineering",
             "subjects": [
                 "Construction Materials"
@@ -178,7 +178,7 @@
         {
             "id": 22,
             "reg_no": "7",
-            "name": "Rijan Subedi",
+            "name": "Niticodes",
             "department": "MBA",
             "subjects": [],
             "available": [],

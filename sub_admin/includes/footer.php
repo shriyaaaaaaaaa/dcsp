@@ -1,8 +1,4 @@
 <footer class="footer mt-auto">
-  <div class="footer-left">
-    <img src="img/flogo.png" alt="DCPA Logo" class="footer-logo" style="width: 190px;" />
-  </div>
-
   <div class="footer-section">
     <h3>Our System</h3>
     <ul>
@@ -24,9 +20,9 @@
 
   <div class="footer-section">
     <h3>Contact Us</h3>
-    <p>Pepsicola, Kathmandu, Nepal</p>
-    <p>info@dcpa.com</p>
-    <p>support@dcpa.com</p>
+    <p>Chabahil, Kathmandu, Nepal</p>
+    <p>info@rms.com</p>
+    <p>support@rms.com</p>
   </div>
 </footer>
 

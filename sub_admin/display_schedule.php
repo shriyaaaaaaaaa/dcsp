@@ -80,7 +80,6 @@ unset($rows, $r);
     <meta charset="UTF-8" />
     <title><?= htmlspecialchars($org_name) ?> — Schedule</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
@@ -212,7 +211,6 @@ unset($rows, $r);
                         $teacher = htmlspecialchars($r['teacher'] ?? '');
                         echo "<td><div class='subject'>{$subject}</div><div class='teacher fw-bold'>👨‍🏫 {$teacher}</div></td>";
                     }
-
                     echo "</tr></tbody></table></div></div>";
                 }
             }

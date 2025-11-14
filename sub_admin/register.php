@@ -9,6 +9,8 @@ if (empty($_SESSION['csrf_token'])) {
 
 // Handle form submission
 $errors = [];
+$maxFileSizeMB  = 5;
+$maxFileSizeB   = $maxFileSizeMB * 1024 * 1024;
 $input_data = [
     'org_name' => isset($_POST['org_name']) ? htmlspecialchars(trim($_POST['org_name'])) : '',
     'email' => isset($_POST['email']) ? htmlspecialchars(trim($_POST['email'])) : '',
@@ -77,9 +79,10 @@ if (empty($errors)) {
     $allowed_types = ['pdf', 'jpg', 'jpeg', 'png'];
     if (!in_array($file_type, $allowed_types)) {
         $errors['certificate'] = "Invalid file format. Only PDF, JPG, JPEG, and PNG are allowed.";
-    } elseif ($certificate['size'] > 5 * 1024 * 1024) { // 5MB limit
-        $errors['certificate'] = "File size exceeds 5MB.";
-    } else {
+    } elseif ($certificate['size'] > $maxFileSizeB) {
+    $errors['certificate'] = "File size exceeds {$maxFileSizeMB}MB.";
+} else {
+
         if (move_uploaded_file($certificate["tmp_name"], $target_file)) {
             // Insert into database with approval set to 0
             $approval = 0;
@@ -198,8 +201,6 @@ if (empty($errors)) {
         </div>
     <?php endif; ?>
 </div>
-
-
                         <div class="mb-3">
                             <label for="org_type" class="form-label">Organization Type</label>
                             <select class="form-control <?= isset($errors['org_type']) ? 'is-invalid' : '' ?>" id="org_type" name="org_type" required>
@@ -234,7 +235,7 @@ if (empty($errors)) {
                             <?php endif; ?>
                         </div>
                         <div class="mb-3">
-                            <label for="certificate" class="form-label">Upload Registration Certificate <small class="text-muted">(PDF/JPG/PNG, max 5MB)</small></label>
+                            <label for="certificate" class="form-label">Upload Registration Certificate <small class="text-muted">(PDF/JPG/PNG, max 100MB)</small></label>
                             <input type="file" class="form-control <?= isset($errors['certificate']) ? 'is-invalid' : '' ?>" id="certificate" name="certificate" accept=".pdf,.jpg,.jpeg,.png" required>
                             <?php if (isset($errors['certificate'])): ?>
                                 <div class="error"><?= htmlspecialchars($errors['certificate']) ?></div>
