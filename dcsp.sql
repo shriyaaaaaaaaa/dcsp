@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 09, 2025 at 03:29 AM
+-- Generation Time: Nov 14, 2025 at 07:18 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(1, 'rijan@gmail.com', 'Rijan@123');
+(1, 'niticodes@gmail.com', 'Nits@123');
 
 -- --------------------------------------------------------
 
@@ -97,14 +97,14 @@ CREATE TABLE `classes` (
 --
 
 INSERT INTO `classes` (`id`, `org_name`, `sub_admin_id`, `class_name`, `subjects`, `start_time`, `end_time`) VALUES
-(1, 'CAB', 6, 'BCA 1st sem', 'Database Management,GIS,Micro-Processor', '10:00:00', '15:00:00'),
-(2, 'CAB', 6, 'BCA 2nd sem class', 'Database Management,GIS,Micro-Processor,Operating Systems', '11:00:00', '16:00:00'),
-(3, 'CAB', 6, 'BCA 3rd sem', 'GIS,Programming in C,Web Technologies', '10:00:00', '16:00:00'),
-(4, 'CAB', 6, 'BCA 4th sem', 'GIS,Operating Systems,Programming in C,Information Security', '12:00:00', '18:00:00'),
-(5, 'JAYCESS', 13, 'BIT 1st year', 'Database Management, Programming in C, Computer Networks, Mathematics, Operating Systems, Web Technologies', '11:00:00', '17:30:00'),
-(7, 'JAYCESS', 13, 'BCA test', 'GIS, Micro-Processor, Operating Systems, Database Management, Web Technologies, Programming in C', '09:00:00', '16:00:00'),
-(8, 'MVEBS', 19, 'BCA 1st sem', 'Computer Fundamentals and Applications,Digital Logic,Mathematics-I,Professional Communication and Ethics,Programming in C', '09:00:00', '15:00:00'),
-(9, 'MVEBS', 19, 'BCA 2nd sem', 'Discrete Structure,Mathematics-II,Micro-Processor,OOP in Java,UX/UI Design', '10:00:00', '16:00:00'),
+(1, 'CAB', 6, 'BSc.CSIT 1st sem', 'Database Management,GIS,Micro-Processor', '10:00:00', '15:00:00'),
+(2, 'CAB', 6, 'BSc.CSIT 2nd sem', 'Database Management,GIS,Micro-Processor,Operating Systems', '11:00:00', '16:00:00'),
+(3, 'CAB', 6, 'BSc.CSIT 3rd sem', 'GIS,Programming in C,Web Technologies', '10:00:00', '16:00:00'),
+(4, 'CAB', 6, 'BSc.CSIT 4th sem', 'GIS,Operating Systems,Programming in C,Information Security', '12:00:00', '18:00:00'),
+(5, 'JAYCESS', 13, 'BSc.CSIT 5th sem', 'Database Management, Programming in C, Computer Networks, Mathematics, Operating Systems, Web Technologies', '11:00:00', '17:30:00'),
+(7, 'JAYCESS', 13, 'BSc.CSIT 7th sem', 'GIS, Micro-Processor, Operating Systems, Database Management, Web Technologies, Programming in C', '09:00:00', '16:00:00'),
+(8, 'MVEBS', 19, 'BSc.CSIT 8th sem', 'Computer Fundamentals and Applications,Digital Logic,Mathematics-I,Professional Communication and Ethics,Programming in C', '09:00:00', '15:00:00'),
+(9, 'MVEBS', 19, 'BSc.CSIT Practical Lab', 'Discrete Structure,Mathematics-II,Micro-Processor,OOP in Java,UX/UI Design', '10:00:00', '16:00:00'),
 (10, 'MVEBS', 19, 'BCA 3rd sem', 'Applied Economics,Data Structure and Algorithms,Database Management System,Probability and Statistics,System Analysis and Design,Web Technology-I', '09:00:00', '16:00:00');
 
 -- --------------------------------------------------------
@@ -128,14 +128,8 @@ CREATE TABLE `comment` (
 
 INSERT INTO `comment` (`id`, `org_id`, `teacher_id`, `name`, `comment`, `date`) VALUES
 (1, 19, 202, '', 'can you make me look good', '2025-09-05 22:52:49'),
-(3, 19, 201, 'Ravi Ram', 'this is a try message where i can express my thoughts and feelings about the schedule that my organization created and i can tell what i didn\'t like about the schedule.', '2025-09-05 22:58:37'),
 (4, 6, 3, 'Test3', 'their is only one class for me atleat add one more class for me', '2025-09-06 00:25:20'),
 (5, 6, 5, 'Test5', 'hi i would like to test this comment section in you software', '2025-09-06 13:17:22'),
-(6, 13, 8, 'Rijan Subedi', 'ryrt', '2025-11-06 11:34:57'),
-(7, 13, 8, 'Rijan Subedi', 'vfcghcg', '2025-11-06 11:36:27'),
-(8, 13, 8, 'Rijan Subedi', 'fyfvu', '2025-11-06 12:13:49'),
-(9, 13, 8, 'Rijan Subedi', '1233', '2025-11-06 12:14:09'),
-(10, 13, 8, 'Rijan Subedi', 'ujjjjjjjjjjjjjjjjjjjj', '2025-11-07 10:06:01'),
 (11, 13, 8, 'Niticodes', 'jjjjjjjjjjjjjjjjjjjjj', '2025-11-07 12:48:56');
 
 -- --------------------------------------------------------
@@ -386,7 +380,11 @@ INSERT INTO `jaycess_13` (`id`, `org_name`, `sub_admin_id`, `teacher_reg`, `stud
 (13, 'JAYCESS', 13, NULL, '40472021', '2025-08-06 18:09:41', NULL),
 (14, 'JAYCESS', 13, NULL, '40492021', '2025-08-06 18:09:53', NULL),
 (15, 'JAYCESS', 13, NULL, '40502020', '2025-08-06 18:29:26', NULL),
-(16, 'JAYCESS', 13, NULL, NULL, '2025-08-12 12:00:35', '[\"Advance Java\"]');
+(16, 'JAYCESS', 13, NULL, NULL, '2025-08-12 12:00:35', '[\"Advance Java\"]'),
+(29, 'CAB', 6, 't100', '112200', '2025-11-14 05:42:02', 'BSc.CSIT 1st sem'),
+(30, 'CAB', 6, 't100', '112201', '2025-11-14 05:42:02', 'BSc.CSIT 7th sem'),
+(31, 'CAB', 6, 't100', '112202', '2025-11-14 05:42:02', 'BSc.CSIT 1st sem'),
+(32, 'CAB', 6, 't100', '112203', '2025-11-14 05:42:02', 'BSc.CSIT 8th sem');
 
 -- --------------------------------------------------------
 
@@ -406,35 +404,6 @@ CREATE TABLE `leave_requests` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `leave_requests`
---
-
-INSERT INTO `leave_requests` (`id`, `teacher_id`, `date_from`, `date_to`, `reason`, `subjects`, `status`, `admin_comment`, `created_at`, `updated_at`) VALUES
-(3, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:47:07', '2025-11-08 17:47:07'),
-(4, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:49:54', '2025-11-08 17:49:54'),
-(5, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:51:13', '2025-11-08 17:51:13'),
-(6, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:51:23', '2025-11-08 17:51:23'),
-(7, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:54:28', '2025-11-08 17:54:28'),
-(8, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:55:22', '2025-11-08 17:55:22'),
-(9, 8, '2025-11-08', '2025-11-11', 'headachee', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:55:52', '2025-11-08 17:55:52'),
-(10, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:56:13', '2025-11-08 17:56:13'),
-(11, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:56:39', '2025-11-08 17:56:39'),
-(12, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:57:01', '2025-11-08 17:57:01'),
-(13, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:57:15', '2025-11-08 17:57:15'),
-(14, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:57:21', '2025-11-08 17:57:21'),
-(15, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:57:26', '2025-11-08 17:57:26'),
-(16, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:57:35', '2025-11-08 17:57:35'),
-(17, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:57:46', '2025-11-08 17:57:46'),
-(18, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:58:04', '2025-11-08 17:58:04'),
-(19, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 17:58:17', '2025-11-08 17:58:17'),
-(20, 8, '2025-11-08', '2025-11-26', 'dating', 'Micro-Processor', 'PENDING', NULL, '2025-11-08 18:01:34', '2025-11-08 18:01:34'),
-(21, 8, '2025-11-01', '2025-11-19', 'byebye', 'Programming in C', 'PENDING', NULL, '2025-11-08 18:01:53', '2025-11-08 18:01:53'),
-(22, 8, '2025-11-01', '2025-11-19', 'byebye', 'Programming in C', 'PENDING', NULL, '2025-11-08 18:02:00', '2025-11-08 18:02:00'),
-(23, 8, '2025-11-01', '2025-11-19', 'byebye', 'Programming in C', 'APPROVED', '', '2025-11-08 18:06:39', '2025-11-09 02:27:53'),
-(24, 8, '2025-11-21', '2025-11-30', 'Dhangadhi', 'Programming in C', 'APPROVED', '', '2025-11-08 18:08:06', '2025-11-09 02:24:30'),
-(25, 8, '2025-11-09', '2025-11-12', 'kjjkkl', 'Programming in C', 'REJECTED', '', '2025-11-09 02:25:31', '2025-11-09 02:25:56');
 
 -- --------------------------------------------------------
 
@@ -495,12 +464,12 @@ CREATE TABLE `replies` (
 --
 
 INSERT INTO `replies` (`id`, `comment_id`, `org_id`, `teacher_id`, `name`, `reply`, `date`) VALUES
-(1, 3, 19, NULL, 'Pritima School', 'we\'ll look for it', '2025-09-05 23:54:38'),
-(2, 1, 19, NULL, 'Pritima School', 'yes i can but i wont', '2025-09-05 23:55:11'),
-(3, 1, 19, NULL, 'Pralhad Adhikari', 'You are good', '2025-09-05 23:55:32'),
-(4, 1, 19, NULL, 'Rijan Subedi', 'We are trying our best to do that', '2025-09-06 00:10:44'),
-(5, 4, 6, NULL, 'Ratna Rajhya', 'we\'ll surely look for it', '2025-09-06 00:26:25'),
-(6, 5, 6, NULL, 'Ratna Rajhya', 'okay test is clear', '2025-09-06 13:22:45');
+(1, 3, 19, NULL, 'AVN', 'we\'ll look for it', '2025-09-05 23:54:38'),
+(2, 1, 19, NULL, 'AVN', 'yes i can but i wont', '2025-09-05 23:55:11'),
+(3, 1, 19, NULL, 'Shriya', 'You are good', '2025-09-05 23:55:32'),
+(4, 1, 19, NULL, 'Santoshiji', 'We are trying our best to do that', '2025-09-06 00:10:44'),
+(5, 4, 6, NULL, 'Everest', 'we\'ll surely look for it', '2025-09-06 00:26:25'),
+(6, 5, 6, NULL, 'Everest', 'okay test is clear', '2025-09-06 13:22:45');
 
 -- --------------------------------------------------------
 
@@ -521,18 +490,18 @@ CREATE TABLE `schedule` (
 --
 
 INSERT INTO `schedule` (`id`, `org_id`, `class_name`, `schedule_json`, `created_at`) VALUES
-(1, 19, 'BCA 1st sem', '[{\"time\":\"09:00-10:00\",\"subject\":\"Digital Logic\",\"teacher\":\"Shyam K\"},{\"time\":\"10:00-11:00\",\"subject\":\"Professional Communication and Ethics\",\"teacher\":\"Abhi Sharma\"},{\"time\":\"11:00-12:00\",\"subject\":\"Programming in C\",\"teacher\":\"Akash Shyam\"},{\"time\":\"12:00-13:00\",\"subject\":\"Mathematics-I\",\"teacher\":\"Surya K\"},{\"time\":\"14:00-15:00\",\"subject\":\"Computer Fundamentals and Applications\",\"teacher\":\"Ravi Ram\"}]', '2025-09-05 21:11:59'),
-(2, 19, 'BCA 2nd sem', '[{\"time\":\"10:00-11:00\",\"subject\":\"Discrete Structure\",\"teacher\":\"Shyam K\"},{\"time\":\"12:00-13:00\",\"subject\":\"Micro-Processor\",\"teacher\":\"Sashi Shyam\"},{\"time\":\"13:00-14:00\",\"subject\":\"Mathematics-II\",\"teacher\":\"Surya K\"},{\"time\":\"14:00-15:00\",\"subject\":\"OOP in Java\",\"teacher\":\"Sunita Adhikari\"},{\"time\":\"15:00-16:00\",\"subject\":\"UX/UI Design\",\"teacher\":\"Akash Shyam\"}]', '2025-09-05 21:11:59'),
-(3, 19, 'BCA 3rd sem', '[{\"time\":\"09:00-10:00\",\"subject\":\"Database Management System\",\"teacher\":\"Ravi Ram\"},{\"time\":\"10:00-11:00\",\"subject\":\"Probability and Statistics\",\"teacher\":\"Rejeena Ghimire\"},{\"time\":\"12:00-13:00\",\"subject\":\"System Analysis and Design\",\"teacher\":\"Akash Shyam\"},{\"time\":\"13:00-14:00\",\"subject\":\"Applied Economics\",\"teacher\":\"Samjhana Karki\"},{\"time\":\"14:00-15:00\",\"subject\":\"Data Structure and Algorithms\",\"teacher\":\"Shyam K\"},{\"time\":\"15:00-16:00\",\"subject\":\"Web Technology-I\",\"teacher\":\"Sunita Adhikari\"}]', '2025-09-05 21:11:59'),
-(4, 6, 'BCA 1st sem', '[{\"time\":\"10:00-11:00\",\"subject\":\"GIS\",\"teacher\":\"Prasant GC\"},{\"time\":\"13:00-14:00\",\"subject\":\"Micro-Processor\",\"teacher\":\"Test3\"},{\"time\":\"14:00-15:00\",\"subject\":\"Database Management\",\"teacher\":\"Test4\"}]', '2025-09-06 00:21:38'),
-(5, 6, 'BCA 2nd sem class', '[{\"time\":\"11:00-12:00\",\"subject\":\"GIS\",\"teacher\":\"Test5\"},{\"time\":\"12:00-13:00\",\"subject\":\"Database Management\",\"teacher\":\"Test4\"},{\"time\":\"14:00-15:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Test6\"},{\"time\":\"15:00-16:00\",\"subject\":\"Micro-Processor\",\"teacher\":\"Test3\"}]', '2025-09-06 00:21:38'),
-(6, 6, 'BCA 3rd sem', '[{\"time\":\"10:00-11:00\",\"subject\":\"Programming in C\",\"teacher\":\"Test5\"},{\"time\":\"13:00-14:00\",\"subject\":\"GIS\",\"teacher\":\"test1\"},{\"time\":\"14:00-15:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Test5\"}]', '2025-09-06 00:21:38'),
-(7, 6, 'BCA 4th sem', '[{\"time\":\"12:00-13:00\",\"subject\":\"Information Security\",\"teacher\":\"Test2\"},{\"time\":\"15:00-16:00\",\"subject\":\"GIS\",\"teacher\":\"Test5\"},{\"time\":\"16:00-17:00\",\"subject\":\"Programming in C\",\"teacher\":\"Test5\"},{\"time\":\"17:00-18:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Test4\"}]', '2025-09-06 00:21:38'),
-(8, 14, 'BCA 1st sem', '[{\"time\":\"09:00-10:00\",\"subject\":\"Digital Logic\",\"teacher\":\"Shyam K\"},{\"time\":\"10:00-11:00\",\"subject\":\"Professional Communication and Ethics\",\"teacher\":\"Abhi Sharma\"}]', '2025-11-05 00:00:00'),
-(9, 14, 'BCA 2nd sem', '[{\"time\":\"10:00-11:00\",\"subject\":\"Discrete Structure\",\"teacher\":\"Shyam K\"},{\"time\":\"12:00-13:00\",\"subject\":\"Micro-Processor\",\"teacher\":\"Sashi Shyam\"}]', '2025-11-05 00:00:00'),
-(10, 14, 'BCA 3rd sem', '[{\"time\":\"09:00-10:00\",\"subject\":\"Database Management System\",\"teacher\":\"Ravi Ram\"},{\"time\":\"10:00-11:00\",\"subject\":\"Probability and Statistics\",\"teacher\":\"Rejeena Ghimire\"}]', '2025-11-05 00:00:00'),
-(61, 13, 'BIT 1st year', '[{\"time\":\"11:00-12:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"},{\"time\":\"11:00-12:00\",\"subject\":\"Programming in C\",\"teacher\":\"Niticodes\"},{\"time\":\"12:00-13:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"},{\"time\":\"13:00-14:00\",\"subject\":\"Database Management\",\"teacher\":\"Santosh Magar\"},{\"time\":\"14:00-15:00\",\"subject\":\"Programming in C\",\"teacher\":\"Niticodes\"},{\"time\":\"15:00-16:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Niticodes\"}]', '2025-11-09 07:29:52'),
-(62, 13, 'BCA test', '[{\"time\":\"09:00-10:00\",\"subject\":\"Programming in C\",\"teacher\":\"Niticodes\"},{\"time\":\"10:00-11:00\",\"subject\":\"Database Management\",\"teacher\":\"Santosh Magar\"},{\"time\":\"11:00-12:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"},{\"time\":\"12:00-13:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Niticodes\"},{\"time\":\"13:00-14:00\",\"subject\":\"GIS\",\"teacher\":\"Santosh Magar\"},{\"time\":\"14:00-15:00\",\"subject\":\"Micro-Processor\",\"teacher\":\"Niticodes\"},{\"time\":\"15:00-16:00\",\"subject\":\"GIS\",\"teacher\":\"Santosh Magar\"}]', '2025-11-09 07:29:54');
+(1, 19, 'Bsc.CSIT 1st sem', '[{\"time\":\"09:00-10:00\",\"subject\":\"Digital Logic\",\"teacher\":\"Shyam K\"},{\"time\":\"10:00-11:00\",\"subject\":\"Professional Communication and Ethics\",\"teacher\":\"Abhi Sharma\"},{\"time\":\"11:00-12:00\",\"subject\":\"Programming in C\",\"teacher\":\"Akash Shyam\"},{\"time\":\"12:00-13:00\",\"subject\":\"Mathematics-I\",\"teacher\":\"Surya K\"},{\"time\":\"14:00-15:00\",\"subject\":\"Computer Fundamentals and Applications\",\"teacher\":\"Ravi Ram\"}]', '2025-09-05 21:11:59'),
+(2, 19, 'Bsc.CSIT 2nd sem', '[{\"time\":\"10:00-11:00\",\"subject\":\"Discrete Structure\",\"teacher\":\"Shyam K\"},{\"time\":\"12:00-13:00\",\"subject\":\"Micro-Processor\",\"teacher\":\"Sashi Shyam\"},{\"time\":\"13:00-14:00\",\"subject\":\"Mathematics-II\",\"teacher\":\"Surya K\"},{\"time\":\"14:00-15:00\",\"subject\":\"OOP in Java\",\"teacher\":\"Sunita Adhikari\"},{\"time\":\"15:00-16:00\",\"subject\":\"UX/UI Design\",\"teacher\":\"Akash Shyam\"}]', '2025-09-05 21:11:59'),
+(3, 19, 'Bsc.CSIT 3rd sem', '[{\"time\":\"09:00-10:00\",\"subject\":\"Database Management System\",\"teacher\":\"Ravi Ram\"},{\"time\":\"10:00-11:00\",\"subject\":\"Probability and Statistics\",\"teacher\":\"Rejeena Ghimire\"},{\"time\":\"12:00-13:00\",\"subject\":\"System Analysis and Design\",\"teacher\":\"Akash Shyam\"},{\"time\":\"13:00-14:00\",\"subject\":\"Applied Economics\",\"teacher\":\"Samjhana Karki\"},{\"time\":\"14:00-15:00\",\"subject\":\"Data Structure and Algorithms\",\"teacher\":\"Shyam K\"},{\"time\":\"15:00-16:00\",\"subject\":\"Web Technology-I\",\"teacher\":\"Sunita Adhikari\"}]', '2025-09-05 21:11:59'),
+(8, 14, 'Bsc.CSIT 1st sem', '[{\"time\":\"09:00-10:00\",\"subject\":\"Digital Logic\",\"teacher\":\"Shyam K\"},{\"time\":\"10:00-11:00\",\"subject\":\"Professional Communication and Ethics\",\"teacher\":\"Abhi Sharma\"}]', '2025-11-05 00:00:00'),
+(9, 14, 'Bsc.CSIT 2nd sem', '[{\"time\":\"10:00-11:00\",\"subject\":\"Discrete Structure\",\"teacher\":\"Shyam K\"},{\"time\":\"12:00-13:00\",\"subject\":\"Micro-Processor\",\"teacher\":\"Sashi Shyam\"}]', '2025-11-05 00:00:00'),
+(10, 14, 'Bsc.CSIT 3rd sem', '[{\"time\":\"09:00-10:00\",\"subject\":\"Database Management System\",\"teacher\":\"Ravi Ram\"},{\"time\":\"10:00-11:00\",\"subject\":\"Probability and Statistics\",\"teacher\":\"Rejeena Ghimire\"}]', '2025-11-05 00:00:00'),
+(67, 13, 'BIT 1st year', '[{\"time\":\"11:00-12:00\",\"subject\":\"Database Management\",\"teacher\":\"Santosh Magar\"},{\"time\":\"12:00-13:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"},{\"time\":\"13:00-14:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"},{\"time\":\"14:00-15:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"},{\"time\":\"15:00-16:00\",\"subject\":\"Database Management\",\"teacher\":\"Santosh Magar\"},{\"time\":\"15:00-16:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"}]', '2025-11-14 07:50:44'),
+(68, 13, 'Bsc.CSIT test', '[{\"time\":\"09:00-10:00\",\"subject\":\"GIS\",\"teacher\":\"Santosh Magar\"},{\"time\":\"10:00-11:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"},{\"time\":\"11:00-12:00\",\"subject\":\"GIS\",\"teacher\":\"Santosh Magar\"},{\"time\":\"12:00-13:00\",\"subject\":\"Database Management\",\"teacher\":\"Santosh Magar\"},{\"time\":\"13:00-14:00\",\"subject\":\"GIS\",\"teacher\":\"Santosh Magar\"},{\"time\":\"14:00-15:00\",\"subject\":\"GIS\",\"teacher\":\"Santosh Magar\"},{\"time\":\"15:00-16:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Santosh Magar\"}]', '2025-11-14 07:50:47'),
+(69, 6, 'Bsc.CSIT 1st sem', '[{\"time\":\"10:00-11:00\",\"subject\":\"Database Management\",\"teacher\":\"Test4\"},{\"time\":\"11:00-12:00\",\"subject\":\"Database Management\",\"teacher\":\"Test4\"},{\"time\":\"11:00-12:00\",\"subject\":\"GIS\",\"teacher\":\"Test5\"},{\"time\":\"12:00-13:00\",\"subject\":\"Micro-Processor\",\"teacher\":\"Test3\"},{\"time\":\"14:00-15:00\",\"subject\":\"Micro-Processor\",\"teacher\":\"Test3\"}]', '2025-11-14 08:29:43'),
+(70, 6, 'Bsc.CSIT 2nd sem class', '[{\"time\":\"11:00-12:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Test5\"},{\"time\":\"12:00-13:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Test5\"},{\"time\":\"14:00-15:00\",\"subject\":\"GIS\",\"teacher\":\"Test3\"},{\"time\":\"14:00-15:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Test5\"},{\"time\":\"15:00-16:00\",\"subject\":\"Micro-Processor\",\"teacher\":\"Test3\"}]', '2025-11-14 08:29:45'),
+(71, 6, 'Bsc.CSIT 3rd sem', '[{\"time\":\"10:00-11:00\",\"subject\":\"Programming in C\",\"teacher\":\"Test5\"},{\"time\":\"11:00-12:00\",\"subject\":\"Web Technologies\",\"teacher\":\"Test5\"},{\"time\":\"12:00-13:00\",\"subject\":\"GIS\",\"teacher\":\"Test3\"},{\"time\":\"12:00-13:00\",\"subject\":\"Programming in C\",\"teacher\":\"Test5\"},{\"time\":\"14:00-15:00\",\"subject\":\"Programming in C\",\"teacher\":\"Test5\"},{\"time\":\"15:00-16:00\",\"subject\":\"GIS\",\"teacher\":\"Test3\"}]', '2025-11-14 08:29:49'),
+(72, 6, 'Bsc.CSIT 4th sem', '[{\"time\":\"12:00-13:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Test2\"},{\"time\":\"14:00-15:00\",\"subject\":\"Programming in C\",\"teacher\":\"Test5\"},{\"time\":\"14:00-15:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Test2\"},{\"time\":\"15:00-16:00\",\"subject\":\"GIS\",\"teacher\":\"Test3\"},{\"time\":\"16:00-17:00\",\"subject\":\"Operating Systems\",\"teacher\":\"Test2\"},{\"time\":\"16:00-17:00\",\"subject\":\"GIS\",\"teacher\":\"Test3\"}]', '2025-11-14 08:29:52');
 
 -- --------------------------------------------------------
 
@@ -558,9 +527,10 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`id`, `reg_no`, `name`, `email`, `password`, `org_id`, `class`, `class_id`, `tick`, `created_at`) VALUES
-(2, 's100', 'Nishan Karki', 'nishan1@gmail.com', '12345', '14', 'BCA 3rd sem', 10, 1, '2025-06-12 01:19:32'),
-(3, 'p100', 'Pralhad Adhikari', 'p@gmail.com', '12345', '15', '', 0, 1, '2025-07-13 03:12:43'),
-(0, '400', 'Sathi mitra', 'sathi@gmail.com', '12345', '6', 'BCA 2nd sem class', 29, 0, '2025-09-06 07:23:23');
+(2, 's100', 'niticodes', 'niticodes@gmail.com', '12345', '14', 'Bsc.CSIT 7th sem', 8, 1, '2025-06-12 01:19:32'),
+(3, 'p100', 'blueshriya', 'blueshriya@gmail.com', '12345', '15', 'Bsc.CSIT 1st sem', 0, 1, '2025-07-13 03:12:43'),
+(4, '400', 'sntoshii', 'sntoshi@gmail.com', '12345', '6', 'Bsc.CSIT 8th sem', 29, 0, '2025-09-06 07:23:23'),
+(7, '112200', 'joshin', 'joshin@gmail.com', '123456', '13', 'BSc.CSIT 1st sem', 1, 0, '2025-11-14 05:19:25');
 
 -- --------------------------------------------------------
 
@@ -585,9 +555,9 @@ CREATE TABLE `sub_admin` (
 --
 
 INSERT INTO `sub_admin` (`id`, `org_name`, `email`, `address`, `org_type`, `password`, `certificate`, `created_at`, `approval`) VALUES
-(6, 'CAB', 'cab@gmail.com', '', 'campus', '12345678', 'uploads/certificates/684187b7f0838.jpg', '2025-06-05 06:19:08', 1),
-(13, 'JAYCESS', 'jaycess@gmail.com', 'Kathmandu', 'organization', 'Rijan@1234', '../admin/Uploads/certificates/684565659295c.jpg', '2025-06-08 04:41:45', 1),
-(14, 'SAINIK', 'sainik@gmail.com', 'Kathmandu', 'school', 'Harion@11', '../admin/Uploads/certificates/684a69a958fa0.jpg', '2025-06-12 00:01:17', 1);
+(6, 'CAB', 'cab@gmail.com', 'Kathmandu', 'campus', '12345678', 'uploads/certificates/684187b7f0838.jpg', '2025-06-05 06:19:08', 1),
+(13, 'JAYCESS', 'jaycess@gmail.com', 'Dhangadhi', 'organization', 'Rijan@1234', '../admin/Uploads/certificates/684565659295c.jpg', '2025-06-08 04:41:45', 1),
+(14, 'SAINIK', 'sainik@gmail.com', 'Surkhet', 'school', 'Harion@11', '../admin/Uploads/certificates/684a69a958fa0.jpg', '2025-06-12 00:01:17', 1);
 
 -- --------------------------------------------------------
 
@@ -615,16 +585,10 @@ CREATE TABLE `teacher` (
 --
 
 INSERT INTO `teacher` (`id`, `reg_no`, `email`, `name`, `password`, `department`, `subjects`, `available`, `phone`, `org_id`, `tick`, `created_at`) VALUES
-(8, 'r30056', 'nitikajoshi013@gmail.com', 'Niticodes', '123', 'BHM', 'Micro-Processor, Operating Systems, Programming in C', '09:00-16:00', '9866123377', '13', '1', '2025-06-09 00:11:37'),
-(9, 'a100', 'sahil100@gmail.com', 'Sahil Oli', 'Sahil@100', 'sahil@100', '', '', '9844046079', '14', '0', '2025-06-12 00:10:53'),
-(10, 'p100', 'p@gmail.com', 'Pralhad Adhikari', 'Intern@100', 'BCA', 'Micro-Processor', '10:00-11:00', '9866123377', '15', '1', '2025-07-13 03:09:48'),
-(11, 'n0069', 'nishan69@gmail.com', 'Santosh Magar', 'Intern@100', 'BCA', 'GIS, Web Technologies, Database Management', '09:00-16:00', '9761789679', '13', '1', '2025-07-16 04:54:55'),
-(15, '1', 'test1@gmail.com', 'test1', 'Intern@100', 'BCA', 'Math, English, Science', '09:00-12:00,13:00-15:00', '9866123377', '6', '1', '2025-08-07 04:51:01'),
-(16, '2', 'test2@gmail.com', 'Test2', 'Intern@100', 'BCA', 'Operating Systems,GIS,Information Security', '14:00-15:00,12:00-13:00,10:00-11:00,16:00-17:00', '9866123377', '6', '1', '2025-08-07 04:57:59'),
-(17, '3', 'test3@gmail.com', 'Test3', 'Intern@100', 'BCA', 'Micro-Processor,Data Structures,Advance Dotnet,GIS', '16:00-17:00,15:00-16:00,14:00-15:00,12:00-13:00,11:00-12:00', '9866123377', '6', '1', '2025-08-07 04:59:09'),
-(18, '4', 'test4@gmail.com', 'Test4', 'Intern@100', 'BCA', 'Operating Systems,Advance Dotnet,Database Management', '09:00-10:00,10:00-11:00,11:00-12:00,12:00-13:00', '9844046079', '6', '1', '2025-08-07 05:00:36'),
-(19, '5', 'test5@gmail.com', 'Test5', 'Intern@100', 'BCA', 'Operating Systems,Web Technologies,GIS,Programming in C', '10:00-11:00,12:00-13:00,14:00-15:00,11:00-12:00,15:00-16:00', '9844046079', '6', '1', '2025-08-07 05:02:04'),
-(20, '6', 'test6@gmail.com', 'Test6', 'Intern@100', 'BCA', 'Operating Systems', '10:00-11:00', '9761789679', '6', '1', '2025-08-07 08:21:39');
+(21, '1122', 'neetujoshi3210@gmail.com', 'nitu joshi', '1122', 'BSc.CSIT', 'Optics', '10:00-11:00', '9825647960', '13', '1', '2025-11-14 02:00:54'),
+(22, '0011', 'santoshiji@gmail.com', 'santoshi magar', '0011', 'BSc.CSIT', '', '1', '9825647960', '6', '1', '2025-11-14 02:41:59'),
+(23, '111222', 'shreya@gmail.com', 'shreya khatri', '111222', 'BSc CSIT', 'Artificial Intelligence,Software Engineering', '06:00-07:00,07:00-08:00,09:00-10:00', '9825647960', '6', '1', '2025-11-14 02:44:20'),
+(24, '112233', 'joshi1@gmail.com', 'nitu joshi', '1234567', 'BFA', '', '1', '4646666', '6', '1', '2025-11-14 06:14:03');
 
 --
 -- Indexes for dumped tables
@@ -661,7 +625,6 @@ ALTER TABLE `courses_subjects`
 --
 ALTER TABLE `jaycess_13`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `unique_teacher` (`teacher_reg`,`sub_admin_id`),
   ADD UNIQUE KEY `unique_student` (`student_reg`,`sub_admin_id`);
 
 --
@@ -685,6 +648,12 @@ ALTER TABLE `schedule`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `student`
+--
+ALTER TABLE `student`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `teacher`
 --
 ALTER TABLE `teacher`
@@ -701,10 +670,16 @@ ALTER TABLE `comment`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT for table `jaycess_13`
+--
+ALTER TABLE `jaycess_13`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
 -- AUTO_INCREMENT for table `leave_requests`
 --
 ALTER TABLE `leave_requests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `replies`
@@ -716,13 +691,19 @@ ALTER TABLE `replies`
 -- AUTO_INCREMENT for table `schedule`
 --
 ALTER TABLE `schedule`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+
+--
+-- AUTO_INCREMENT for table `student`
+--
+ALTER TABLE `student`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `teacher`
 --
 ALTER TABLE `teacher`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables

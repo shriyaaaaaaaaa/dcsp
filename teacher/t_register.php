@@ -1,4 +1,8 @@
 <?php
+// Show errors while we debug
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 include('includes/db_connect.php');
 
 // Handle AJAX request for faculty data
@@ -14,7 +18,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'get_faculties') {
     exit();
 }
 
-$error = '';
+$error   = '';
 $success = '';
 
 if (!isset($_GET['org_id']) || !is_numeric($_GET['org_id'])) {
@@ -33,82 +37,86 @@ if ($result->num_rows === 0) {
     die('<div style="padding:20px; font-size:18px;">Organization not found or not approved.</div>');
 }
 
-$org_data = $result->fetch_assoc();
-$org_name = $org_data['org_name'];
+$org_data   = $result->fetch_assoc();
+$org_name   = $org_data['org_name'];
 $table_slug = preg_replace('/[^a-zA-Z0-9]/', '_', strtolower($org_name)) . "_" . $org_id;
 
-// Check if sub-admin table exists
+// Check if sub-admin table exists (you can keep this if you still want)
 $check_table = $conn->query("SHOW TABLES LIKE '$table_slug'");
 if ($check_table->num_rows === 0) {
-    die("<div style='padding:20px; font-size:18px;'>⚠️ Waiting for <strong>$org_name</strong> to upload their member list.</div>");
+    // You can comment this out if you *never* want to depend on this list
+    // die("<div style='padding:20px; font-size:18px;'>⚠️ Waiting for <strong>$org_name</strong> to upload their member list.</div>");
 }
 
 // Handle form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $reg_no = trim($_POST['reg_no']);
-    $name = trim($_POST['name']);
-    $email = trim($_POST['email']);
-    $password = $_POST['password']; // NOTE: Use password_hash() in production
-    $department = trim($_POST['department']);
-    $phone = trim($_POST['phone']);
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $reg_no     = trim($_POST['reg_no'] ?? '');
+    $name       = trim($_POST['name'] ?? '');
+    $email      = trim($_POST['email'] ?? '');
+    $password   = $_POST['password'] ?? ''; // NOTE: use password_hash() in production
+    $department = trim($_POST['department'] ?? '');
+    $phone      = trim($_POST['phone'] ?? '');
 
-    if (empty($reg_no) || empty($name) || empty($email) || empty($password) || empty($department) || empty($phone)) {
+    if (
+        $reg_no === '' || $name === '' || $email === '' ||
+        $password === '' || $department === '' || $phone === ''
+    ) {
         $error = "Please fill in all the fields.";
     } else {
-        // Check if reg_no is listed in sub-admin table
-        $check_reg = $conn->prepare("SELECT 1 FROM `$table_slug` WHERE teacher_reg = ?");
-        $check_reg->bind_param('s', $reg_no);
-        $check_reg->execute();
-        $reg_result = $check_reg->get_result();
-
-        if ($reg_result->num_rows === 0) {
-            $error = "⚠️ You are not in the teacher list of $org_name.";
-            echo "
-            <html>
-            <head>
-                <meta charset='UTF-8'>
-                <title>Redirecting...</title>
-                <style>
-                    body {
-                        font-family: Arial, sans-serif;
-                        text-align: center;
-                        margin-top: 100px;
-                    }
-                    .error {
-                        color: red;
-                        font-size: 20px;
-                        font-weight: bold;
-                    }
-                </style>
-                <script>
-                    setTimeout(function() {
-                        window.location.href = 't_login.php?status=failed';
-                    }, 3000);
-                </script>
-            </head>
-            <body>
-                <div class='error'>$error</div>
-                <p>You will be redirected shortly...</p>
-            </body>
-            </html>
-            ";
-            exit();
+        // OPTIONAL: check if this reg_no already exists to avoid duplicates
+        $chk = $conn->prepare("SELECT id FROM teacher WHERE reg_no = ? AND org_id = ? LIMIT 1");
+        $chk->bind_param("si", $reg_no, $org_id);
+        $chk->execute();
+        $chk_res = $chk->get_result();
+        if ($chk_res->num_rows > 0) {
+            $error = "A teacher with this registration number is already registered.";
+    
         } else {
-            $insert = $conn->prepare("INSERT INTO teacher (reg_no, name, email, password, department, phone, org_id, tick) VALUES (?, ?, ?, ?, ?, ?, ?, 0)");
-            $insert->bind_param("ssssssi", $reg_no, $name, $email, $password, $department, $phone, $org_id);
+            // Open registration – no teacher-list restriction
+            $subjects  = '';  // default empty, admin can add subjects later
+            $available = 1;   // 1 = available by default (you can change to 0 if you prefer)
+
+            $insert = $conn->prepare(
+                "INSERT INTO teacher (
+                    reg_no,
+                    name,
+                    email,
+                    password,
+                    department,
+                    phone,
+                    subjects,
+                    org_id,
+                    available,
+                    tick
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 0)"
+            );
+
+            if (!$insert) {
+                die('Prepare failed: ' . $conn->error);
+            }
+
+        // 7 strings + 2 integers (org_id, available)
+            $insert->bind_param(
+                'sssssssii',
+                $reg_no,
+                $name,
+                $email,
+                $password,   // later: password_hash(...)
+                $department,
+                $phone,
+                $subjects,
+                $org_id,
+                $available
+            );
             if ($insert->execute()) {
-                $success = "✅ Registration successful!";
-                header("Location: t_login.php?status=success");
-                exit();
+                $success = "✅ Registration successful! You can now log in.";
             } else {
-                header("Location: t_login.php?status=failed");
-                exit();
+                $error = "Database error: " . $conn->error;
             }
         }
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -176,7 +184,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
-        /* Select2 styling to match Bootstrap */
         .select2-container--default .select2-selection--single {
             height: 38px;
             border: none;
@@ -202,35 +209,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <div class="register-page">
     <div class="register-card">
-        <h3 class="text-center mb-4">Teacher Registration for <br><span class="text-primary"><?= htmlspecialchars($org_name) ?></span></h3>
+        <h3 class="text-center mb-4">
+            Teacher Registration for <br>
+            <span class="text-primary"><?= htmlspecialchars($org_name) ?></span>
+        </h3>
 
         <?php if ($error): ?>
-            <div class="alert alert-danger"><?= $error ?></div>
+            <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
         <?php endif; ?>
 
         <?php if ($success): ?>
-            <div class="alert alert-success"><?= $success ?></div>
+            <div class="alert alert-success">
+                <?= htmlspecialchars($success) ?><br>
+                <a href="t_login.php" class="btn btn-sm btn-outline-primary mt-2">Go to Login</a>
+            </div>
         <?php endif; ?>
 
         <form method="POST">
             <div class="mb-3">
                 <label class="form-label">Registration Number</label>
-                <input type="text" name="reg_no" class="form-control" placeholder="Enter your registration number" required>
+                <input type="text" name="reg_no" class="form-control"
+                       placeholder="Enter your registration number" required>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Full Name</label>
-                <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
+                <input type="text" name="name" class="form-control"
+                       placeholder="Enter your full name" required>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Email Address</label>
-                <input type="email" name="email" class="form-control" placeholder="Enter email" required>
+                <input type="email" name="email" class="form-control"
+                       placeholder="Enter email" required>
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+                <input type="password" name="password" class="form-control"
+                       placeholder="Enter password" required>
             </div>
 
             <div class="mb-3">
@@ -242,12 +259,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="mb-3">
                 <label class="form-label">Phone Number</label>
-                <input type="text" name="phone" class="form-control" placeholder="Enter phone number" required>
+                <input type="text" name="phone" class="form-control"
+                       placeholder="Enter phone number" required>
             </div>
 
             <button type="submit" class="btn btn-primary w-100">Register</button>
+
             <div class="text-center mt-3">
-                Already have an account? <a href="t_login.php" class="text-primary">Login here</a>
+                Already have an account?
+                <a href="t_login.php" class="text-primary">Login here</a>
             </div>
         </form>
     </div>
@@ -257,20 +277,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <!-- Select2 JS -->
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<!-- Bootstrap JS (optional, for form styling) -->
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     $(document).ready(function() {
-        // Initialize Select2 for searchable dropdown
         $('#facultySelect').select2({
             placeholder: "Search for a department",
             allowClear: true,
             width: '100%'
         });
 
-        // Fetch faculty data from the same PHP file with action parameter
         $.ajax({
-            url: '<?php echo htmlspecialchars($_SERVER['PHP_SELF']) . "?org_id=" . $org_id . "&action=get_faculties"; ?>',
+            url: '<?= htmlspecialchars($_SERVER['PHP_SELF']) . "?org_id=" . $org_id . "&action=get_faculties"; ?>',
             method: 'GET',
             dataType: 'json',
             success: function(data) {
