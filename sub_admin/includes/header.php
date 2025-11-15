@@ -1,7 +1,13 @@
 <?php
-session_start();
-include('includes/db_connect.php');
+// Prevent infinite loops & duplicate sessions
+if (!defined('SA_HEADER_LOADED')) {
+    define('SA_HEADER_LOADED', true);
 
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+}
+include('includes/db_connect.php');
 // Check if sub_admin is logged in
 if (!isset($_SESSION['sub_admin_id'])) {
     header("Location: sa_login.php");
@@ -63,6 +69,7 @@ $body_class = str_replace('.php', '-page', $current_page);
                     <li class="nav-item"><a class="nav-link" href="sa_profile.php">Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="member.php">Member</a></li>
                     <li class="nav-item"><a class="nav-link" href="display_schedule.php">Schedule</a></li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="manageDropdown" data-bs-toggle="dropdown" aria-expanded="false">Manage</a>
                         <ul class="dropdown-menu dropdown-menu-dark">

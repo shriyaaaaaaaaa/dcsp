@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // Set the session for teacher login
       $_SESSION['teacher_id'] = $teacher['id'];
       $_SESSION['teacher_name'] = $teacher['name'];
+      $_SESSION['organization_id'] = $row['organization_id'];
       
       // Store success message
       $_SESSION['login_success'] = "Login successful! Welcome back, " . $teacher['name'];

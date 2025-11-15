@@ -1,6 +1,13 @@
 <?php
-include('includes/header.php'); // includes db_connect.php & session handling
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+require_once __DIR__ . '/includes/db_connect.php';
+
+include 'includes/header.php';
 // Ensure sub_admin is logged in
 if (!isset($_SESSION['sub_admin_id'])) {
     header("Location: sa_login.php");
@@ -58,8 +65,25 @@ $result = $stmt->get_result();
 $row = $result->fetch_assoc();
 $total_comments = (int)($row['total_comments'] ?? 0);
 $stmt->close();
-?>
+// after you have $conn and session already started
 
+$org_id = $_SESSION['organization_id'] ?? 0;
+
+// count leave requests for this subadmin's organization
+if ($org_id) {
+    $stmt = $conn->prepare("SELECT COUNT(*) AS c FROM leave_requests WHERE organization_id = ?");
+    $stmt->bind_param("i", $org_id);
+    $stmt->execute();
+    $stmt->bind_result($leave_count);
+    $stmt->fetch();
+    $stmt->close();
+} else {
+    // fallback: count all leaves
+    $res = $conn->query("SELECT COUNT(*) AS c FROM leave_requests");
+    $row = $res->fetch_assoc();
+    $leave_count = (int)$row['c'];
+}
+?>
 <!-- Hero / banner -->
 <div class="text-center mb-4"
      style="background-image: url('img/dcspsa.jpg'); background-size: cover; background-position: center;
@@ -129,20 +153,19 @@ $stmt->close();
             </div>
         </div>
 
-        <!-- Output JSON -->
-        <div class="col">
-            <div class="card text-white bg-success h-100">
-                <div class="card-body d-flex flex-column justify-content-between p-3">
-                    <h5 class="card-title">
-                        <a href="output.php" class="text-white text-decoration-none">Output JSON</a>
-                    </h5>
-                    <p class="card-text fs-2">
-                        0
-                        <!-- later you can show actual number of generated timetables -->
-                    </p>
-                </div>
-            </div>
+        <!-- Leave Requests -->
+<div class="col">
+    <div class="card text-white bg-success h-100">
+        <div class="card-body d-flex flex-column justify-content-between p-3">
+            <h5 class="card-title">
+                <a href="sa_leave_request.php" class="text-white text-decoration-none">Leave Requests</a>
+            </h5>
+            <p class="card-text fs-2">
+                <?php echo $leave_count; ?>
+            </p>
         </div>
+    </div>
+</div>
 
     </div>
 </main>

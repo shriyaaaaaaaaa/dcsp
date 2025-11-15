@@ -1,10 +1,4 @@
 <?php
-/**
- * teacher/modules/generate_schedule.php
- * Genetic Algorithm timetable generator (Procedural PHP).
- * Builds schedules per class (for the teacher's organization),
- * and writes results to `schedule` table as JSON.
- */
 session_start();
 require_once __DIR__ . '/../includes/db_connect.php';
 require_once __DIR__ . '/../includes/session_check.php'; // ensures teacher logged in

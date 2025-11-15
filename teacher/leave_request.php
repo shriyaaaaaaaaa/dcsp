@@ -6,27 +6,32 @@ error_reporting(E_ALL);
 session_start();
 require_once __DIR__ . '/includes/db_connect.php';
 
-if (!isset($_SESSION['teacher_id'])) { header("Location: t_login.php"); exit; }
+if (!isset($_SESSION['teacher_id'])) { 
+    header("Location: t_login.php"); 
+    exit; 
+}
 
 /* ----------------------------------------------------------------
    Resolve teacher identity (id or reg_no), load subject options,
    then handle submit and list prior requests.
 -----------------------------------------------------------------*/
-$teacher_key   = $_SESSION['teacher_id'];   // could be "8" or "r30056"
-$teacher_db_id = null;                      // numeric teacher.id
-$teacher_name  = 'Teacher';
-$my_subjects   = [];
+$teacher_key    = $_SESSION['teacher_id'];   // could be "8" or "r30056"
+$teacher_db_id  = null;                      // numeric teacher.id
+$teacher_name   = 'Teacher';
+$teacher_org_id = null;                      // <- NEW: organization_id
+$my_subjects    = [];
 
 /* 1) Resolve numeric id + basic info and CSV subjects (NO get_result used) */
 if (ctype_digit((string)$teacher_key)) {
     // session has numeric id
     $teacher_db_id = (int)$teacher_key;
-    $q = $conn->prepare("SELECT name, subjects FROM teacher WHERE id = ? LIMIT 1");
+    $q = $conn->prepare("SELECT name, subjects, organization_id FROM teacher WHERE id = ? LIMIT 1");
     $q->bind_param("i", $teacher_db_id);
     $q->execute();
-    $q->bind_result($name, $csv);
+    $q->bind_result($name, $csv, $org_id);
     if ($q->fetch()) {
-        $teacher_name = $name ?: 'Teacher';
+        $teacher_name   = $name ?: 'Teacher';
+        $teacher_org_id = (int)$org_id;
         $csv = trim((string)$csv);
         if ($csv !== '') {
             foreach (explode(',', $csv) as $s) {
@@ -38,13 +43,14 @@ if (ctype_digit((string)$teacher_key)) {
     $q->close();
 } else {
     // session has reg_no
-    $q = $conn->prepare("SELECT id, name, subjects FROM teacher WHERE reg_no = ? LIMIT 1");
+    $q = $conn->prepare("SELECT id, name, subjects, organization_id FROM teacher WHERE reg_no = ? LIMIT 1");
     $q->bind_param("s", $teacher_key);
     $q->execute();
-    $q->bind_result($tid, $name, $csv);
+    $q->bind_result($tid, $name, $csv, $org_id);
     if ($q->fetch()) {
-        $teacher_db_id = (int)$tid;
-        $teacher_name  = $name ?: 'Teacher';
+        $teacher_db_id  = (int)$tid;
+        $teacher_name   = $name ?: 'Teacher';
+        $teacher_org_id = (int)$org_id;
         $csv = trim((string)$csv);
         if ($csv !== '') {
             foreach (explode(',', $csv) as $s) {
@@ -56,7 +62,9 @@ if (ctype_digit((string)$teacher_key)) {
     $q->close();
 }
 
-if (!$teacher_db_id) { die("Teacher account not resolved. Please re-login."); }
+if (!$teacher_db_id) { 
+    die("Teacher account not resolved. Please re-login."); 
+}
 
 /* 2) Fallback to schedule if CSV empty (auto-detect subject column) */
 if (!$my_subjects) {
@@ -92,28 +100,52 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Build CSV of selected subjects (keep only ones we offered)
     $subjects_csv = '';
     if (isset($_POST['subjects']) && is_array($_POST['subjects'])) {
-        $subjects_csv = implode(',', array_intersect($my_subjects, array_map('trim', $_POST['subjects'])));
+        $subjects_csv = implode(
+            ',',
+            array_intersect($my_subjects, array_map('trim', $_POST['subjects']))
+        );
     }
 
-    if (!$from || !$to) { $errors[] = "Please select both start and end dates."; }
-    if ($from && $to && strtotime($from) > strtotime($to)) { $errors[] = "Start date must be before end date."; }
-    if (strlen($reason) < 5) { $errors[] = "Reason must be at least 5 characters."; }
+    if (!$from || !$to) { 
+        $errors[] = "Please select both start and end dates."; 
+    }
+    if ($from && $to && strtotime($from) > strtotime($to)) { 
+        $errors[] = "Start date must be before end date."; 
+    }
+    if (strlen($reason) < 5) { 
+        $errors[] = "Reason must be at least 5 characters."; 
+    }
 
     if (!$errors) {
-        $stmt = $conn->prepare(
-            "INSERT INTO leave_requests (teacher_id, date_from, date_to, reason, subjects)
-             VALUES (?, ?, ?, ?, ?)"
-        );
-        $stmt->bind_param("issss", $teacher_db_id, $from, $to, $reason, $subjects_csv);
-        if ($stmt->execute()) {
-            // PRG: set flash + redirect so refresh doesn't re-post
-            $_SESSION['flash_success'] = "Leave request submitted.";
-            header("Location: " . $_SERVER['PHP_SELF']);
-            exit;
+        // INSERT with organization_id + subjects (original logic preserved)
+        $sql = "INSERT INTO leave_requests 
+                    (teacher_id, organization_id, date_from, date_to, reason, subjects, status)
+                VALUES (?, ?, ?, ?, ?, ?, 'PENDING')";
+
+        if ($stmt = $conn->prepare($sql)) {
+            $stmt->bind_param(
+                "iissss",
+                $teacher_db_id,      // numeric id of teacher
+                $teacher_org_id,     // organization_id from teacher table
+                $from,
+                $to,
+                $reason,
+                $subjects_csv
+            );
+
+            if ($stmt->execute()) {
+                // PRG: set flash + redirect so refresh doesn't re-post
+                $_SESSION['flash_success'] = "Leave request submitted.";
+                $stmt->close();
+                header("Location: " . $_SERVER['PHP_SELF']);
+                exit;
+            } else {
+                $errors[] = "Database error: " . $stmt->error;
+                $stmt->close();
+            }
         } else {
             $errors[] = "Database error: " . $conn->error;
         }
-        $stmt->close();
     }
 }
 
@@ -224,11 +256,12 @@ include __DIR__ . "/includes/header.php";
   /* Page container */
   .page-wrap { max-width: 1100px; margin: 0 auto; }
 </style>
-  <div class="container-fluid py-4 page-wrap">
-    <div class="d-flex align-items-center justify-content-between mb-3">
-      <h2 class="page-title mb-0">Leave Requests</h2>
-      <div class="muted">Signed in as <strong><?= htmlspecialchars($teacher_name) ?></strong></div>
-    </div>
+
+<div class="container-fluid py-4 page-wrap">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h2 class="page-title mb-0">Leave Requests</h2>
+    <div class="muted">Signed in as <strong><?= htmlspecialchars($teacher_name) ?></strong></div>
+  </div>
 
   <?php if (!empty($_SESSION['flash_success'])): ?>
     <div class="alert alert-success"><?= htmlspecialchars($_SESSION['flash_success']) ?></div>
@@ -266,7 +299,6 @@ include __DIR__ . "/includes/header.php";
 
         <div class="col-md-6">
           <label class="form-label">Subjects affected (Ctrl/⌘ to select multiple)</label>
-          <!-- Visible multi-select; shows options even without clicking -->
           <select name="subjects[]" class="form-select" multiple size="5">
             <?php if ($my_subjects): ?>
               <?php foreach ($my_subjects as $s): ?>
