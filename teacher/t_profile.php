@@ -6,6 +6,7 @@ if (!isset($_SESSION['teacher_id'])) {
     header('Location: t_login.php');
     exit;
 }
+
 function convertTo12Hours($timeStr) {
     if (strpos($timeStr, '-') !== false) {
         [$start, $end] = explode('-', $timeStr, 2);
@@ -16,23 +17,37 @@ function convertTo12Hours($timeStr) {
         return date("g:i A", strtotime($timeStr));
     }
 }
-$teacher_id = $_SESSION['teacher_id'];
 
-// Fetch teacher data
-$query = $conn->prepare("SELECT * FROM teacher WHERE reg_no = ?");
-$query->bind_param("s", $teacher_id);
+$teacher_key = $_SESSION['teacher_id']; // can be numeric id or reg_no
+
+// ---------------------- FETCH TEACHER ROW ----------------------
+if (ctype_digit((string)$teacher_key)) {
+    // session holds numeric teacher.id
+    $query = $conn->prepare("SELECT * FROM teacher WHERE id = ? LIMIT 1");
+    $query->bind_param("i", $teacher_key);
+} else {
+    // session holds teacher.reg_no
+    $query = $conn->prepare("SELECT * FROM teacher WHERE reg_no = ? LIMIT 1");
+    $query->bind_param("s", $teacher_key);
+}
+
 $query->execute();
-$result = $query->get_result();
+$result  = $query->get_result();
 $teacher = $result->fetch_assoc();
 
 if (!$teacher) {
-    die("Error: No teacher found for reg_no $teacher_id");
+    die("Error: No teacher found for id/reg_no $teacher_key");
 }
 
-$department = $teacher['department'];
+$teacher_id_db = (int)$teacher['id'];      // numeric primary key
+$teacher_regno = $teacher['reg_no'];       // registration number
+$department    = $teacher['department'];
 
-// Fetch subjects for this department
-$subject_query = $conn->prepare("SELECT subject FROM courses_subjects WHERE LOWER(TRIM(faculty)) = LOWER(TRIM(?))");
+// ---------------------- FETCH SUBJECTS FOR DEPARTMENT ----------------------
+$subject_query = $conn->prepare(
+    "SELECT subject FROM courses_subjects 
+     WHERE LOWER(TRIM(faculty)) = LOWER(TRIM(?))"
+);
 $subject_query->bind_param("s", $department);
 $subject_query->execute();
 $subject_result = $subject_query->get_result();
@@ -41,7 +56,7 @@ while ($row = $subject_result->fetch_assoc()) {
     $available_subjects[] = $row['subject'];
 }
 
-// Default available time slots
+// Default available time slots (12-hour form for UI)
 $time_slots = [
     "08:00 AM - 09:00 AM",
     "09:00 AM - 10:00 AM",
@@ -53,11 +68,11 @@ $time_slots = [
     "03:00 PM - 04:00 PM"
 ];
 
-// Handle form submission
+// ---------------------- HANDLE FORM SUBMIT ----------------------
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone = trim($_POST['phone'] ?? '');
     $selected_subjects = $_POST['subjects'] ?? [];
-    $selected_times = $_POST['times'] ?? [];
+    $selected_times    = $_POST['times'] ?? [];
 
     // Convert selected times into 24-hour format before saving
     $converted_times = [];
@@ -73,10 +88,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     $subjects_str = implode(',', $selected_subjects);
-    $times_str = implode(',', $converted_times); // store 24-hour format
+    $times_str    = implode(',', $converted_times); // store 24-hour format
 
-    $update_query = $conn->prepare("UPDATE teacher SET phone = ?, subjects = ?, available = ?, tick = '1' WHERE reg_no = ?");
-    $update_query->bind_param("ssss", $phone, $subjects_str, $times_str, $teacher_id);
+    // Use numeric id in UPDATE so it works regardless of what is in session
+    $update_query = $conn->prepare(
+        "UPDATE teacher 
+         SET phone = ?, subjects = ?, available = ?, tick = '1' 
+         WHERE id = ?"
+    );
+    $update_query->bind_param("sssi", $phone, $subjects_str, $times_str, $teacher_id_db);
+
     if ($update_query->execute()) {
         header('Location: t_dashboard.php');
         exit;
@@ -85,12 +106,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-
-// Convert saved data to arrays for preview
+// ---------------------- PREPARE CURRENT VALUES FOR DISPLAY ----------------------
 $current_subjects = array_filter(array_map('trim', explode(',', $teacher['subjects'] ?? '')));
-$current_times = array_filter(array_map('trim', explode(',', $teacher['available'] ?? '')));
-?>
+$current_times    = array_filter(array_map('trim', explode(',', $teacher['available'] ?? '')));
 
+// Convert stored 24-hour times to 12-hour format so checkboxes show correctly
+$current_times_12 = [];
+foreach ($current_times as $t) {
+    $current_times_12[] = convertTo12Hours($t);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,7 +197,7 @@ $current_times = array_filter(array_map('trim', explode(',', $teacher['available
     <!-- Preview Mode -->
     <div id="preview-section">
         <label><strong>Registration Number:</strong></label>
-        <div class="data-box"><?= htmlspecialchars($teacher['reg_no']) ?></div>
+        <div class="data-box"><?= htmlspecialchars($teacher_regno) ?></div>
 
         <label><strong>Name:</strong></label>
         <div class="data-box"><?= htmlspecialchars($teacher['name']) ?></div>
@@ -213,7 +238,7 @@ $current_times = array_filter(array_map('trim', explode(',', $teacher['available
     <!-- Edit Mode -->
     <form method="POST" id="edit-section" style="display:none;">
         <label><strong>Registration Number (not editable):</strong></label>
-        <div class="data-box"><?= htmlspecialchars($teacher['reg_no']) ?></div>
+        <div class="data-box"><?= htmlspecialchars($teacher_regno) ?></div>
 
         <label><strong>Name (not editable):</strong></label>
         <div class="data-box"><?= htmlspecialchars($teacher['name']) ?></div>
@@ -228,9 +253,13 @@ $current_times = array_filter(array_map('trim', explode(',', $teacher['available
         <div class="subject-grid mb-3">
             <?php foreach ($available_subjects as $sub): ?>
                 <div>
-                    <input class="form-check-input" type="checkbox" id="sub-<?= md5($sub) ?>" name="subjects[]" value="<?= htmlspecialchars($sub) ?>"
+                    <input class="form-check-input" type="checkbox"
+                           id="sub-<?= md5($sub) ?>" name="subjects[]"
+                           value="<?= htmlspecialchars($sub) ?>"
                         <?= in_array($sub, $current_subjects) ? 'checked' : '' ?>>
-                    <label class="form-check-label" for="sub-<?= md5($sub) ?>"><?= htmlspecialchars($sub) ?></label>
+                    <label class="form-check-label" for="sub-<?= md5($sub) ?>">
+                        <?= htmlspecialchars($sub) ?>
+                    </label>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -239,9 +268,13 @@ $current_times = array_filter(array_map('trim', explode(',', $teacher['available
         <div class="time-grid mb-3">
             <?php foreach ($time_slots as $slot): ?>
                 <div>
-                    <input class="form-check-input" type="checkbox" id="time-<?= md5($slot) ?>" name="times[]" value="<?= htmlspecialchars($slot) ?>"
-                        <?= in_array($slot, $current_times) ? 'checked' : '' ?>>
-                    <label class="form-check-label" for="time-<?= md5($slot) ?>"><?= htmlspecialchars($slot) ?></label>
+                    <input class="form-check-input" type="checkbox"
+                           id="time-<?= md5($slot) ?>" name="times[]"
+                           value="<?= htmlspecialchars($slot) ?>"
+                        <?= in_array($slot, $current_times_12) ? 'checked' : '' ?>>
+                    <label class="form-check-label" for="time-<?= md5($slot) ?>">
+                        <?= htmlspecialchars($slot) ?>
+                    </label>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -261,12 +294,13 @@ $current_times = array_filter(array_map('trim', explode(',', $teacher['available
 
 <script>
 function toggleSections() {
-    document.getElementById('preview-section').style.display =
-        document.getElementById('preview-section').style.display === 'none' ? 'block' : 'none';
-    document.getElementById('edit-section').style.display =
-        document.getElementById('edit-section').style.display === 'none' ? 'block' : 'none';
-    document.getElementById('action-buttons').style.display =
-        document.getElementById('action-buttons').style.display === 'none' ? 'flex' : 'none';
+    const preview = document.getElementById('preview-section');
+    const edit    = document.getElementById('edit-section');
+    const actions = document.getElementById('action-buttons');
+
+    preview.style.display = (preview.style.display === 'none') ? 'block' : 'none';
+    edit.style.display    = (edit.style.display === 'none') ? 'block' : 'none';
+    actions.style.display = (actions.style.display === 'none') ? 'flex' : 'none';
 }
 </script>
 </body>

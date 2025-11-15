@@ -35,12 +35,15 @@
       unset($_SESSION['comment_error']);
   }
 
-  // Prepare and execute query to fetch teacher data
-  $query = $conn->prepare("SELECT name, org_id, tick FROM teacher WHERE reg_no = ?");
-  $query->bind_param("s", $teacher_id);
-  $query->execute();
-  $result = $query->get_result();
-  $teacher = $result->fetch_assoc();
+$teacher_id = (int)$_SESSION['teacher_id'];
+
+// Prepare and execute query to fetch teacher data BY ID
+$query = $conn->prepare("SELECT name, org_id, tick FROM teacher WHERE id = ?");
+$query->bind_param("i", $teacher_id);
+$query->execute();
+$result  = $query->get_result();
+$teacher = $result->fetch_assoc();
+
 
   if ($teacher === false) {
       session_destroy();

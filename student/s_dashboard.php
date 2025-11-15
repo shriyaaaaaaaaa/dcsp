@@ -39,7 +39,23 @@ $student_name = $student['name'];
 $org_id = $student['org_id'];
 $class_id = $student['class_id'] ?? null;
 $tick = $student['tick'];
+// Get class name from classes table using class_id
+$class_name = null;
+if (!empty($class_id)) {
+    $cls = $conn->prepare("SELECT class_name FROM classes WHERE id = ?");
+    $cls->bind_param("i", $class_id);
+    $cls->execute();
+    $cls_row = $cls->get_result()->fetch_assoc();
+    $cls->close();
+    $class_name = $cls_row['class_name'] ?? null;
+}
 
+// If class_name still empty, force profile update
+if (empty($class_name)) {
+    $_SESSION['profile_warning'] = 'Please update your profile first to select a valid class.';
+    header('Location: s_profile.php');
+    exit;
+}
 // Redirect if no class assigned
 if (empty($class_id)) {
     $_SESSION['profile_warning'] = 'Please update your profile first to select a class.';
@@ -102,11 +118,14 @@ function convertTo12Hours($timeStr) {
   <div id="home" style="background-color: black;">
     <h1 class="section-title mb-4 text-center" style="color: white;">Class Schedule</h1>
     <?php
-    $sched_query = $conn->prepare("SELECT id, class_name, schedule_json, created_at 
-                                   FROM schedule 
-                                   WHERE org_id = ? AND id = ? 
-                                   ORDER BY created_at DESC");
-    $sched_query->bind_param("ii", $org_id, $class_id);
+  $sched_query = $conn->prepare("
+    SELECT id, class_name, schedule_json, created_at
+    FROM schedule
+    WHERE org_id = ? AND class_name = ?
+    ORDER BY created_at DESC
+    LIMIT 1
+");
+$sched_query->bind_param("is", $org_id, $class_name);
     $sched_query->execute();
     $schedule_result = $sched_query->get_result();
 

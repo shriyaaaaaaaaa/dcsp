@@ -121,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         &times;
                     </a>
 
-                    <h3 class="text-center mb-4">Login to DCSP</h3>
+                    <h3 class="text-center mb-4">Login as a subadmin</h3>
 
                     <?php if (!empty($success_message)): ?>
                         <div class="alert alert-success text-center"><?= htmlspecialchars($success_message) ?></div>

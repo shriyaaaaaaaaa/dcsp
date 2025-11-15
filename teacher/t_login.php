@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verify the password (use password_verify if using hashed passwords)
     if ($password === $teacher['password']) {
       // Set the session for teacher login
-      $_SESSION['teacher_id'] = $teacher['reg_no'];
+      $_SESSION['teacher_id'] = $teacher['id'];
       $_SESSION['teacher_name'] = $teacher['name'];
       
       // Store success message
